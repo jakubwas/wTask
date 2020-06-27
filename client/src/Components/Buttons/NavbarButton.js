@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
-  background: #506578;
+  background: #1a2639;
   display: flex;
   align-items: center;
   justify-content: center;
