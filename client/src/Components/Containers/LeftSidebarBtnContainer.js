@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled.li`
   width: 100%;
   display: flex;
   align-items: center;
@@ -15,15 +15,19 @@ const ButtonContainer = styled.div`
   cursor: pointer;
   border-top: 2px solid #dee1ec;
   border-bottom: 2px solid #dee1ec;
+  transform: translateY(${(props) => props.tranY});
 
   &:hover {
     border-top: 2px solid #083358;
     border-bottom: 2px solid #083358;
+    z-index: 1;
   }
 `;
 
 const LeftSidebarBtnContainer = (props) => {
-  return <ButtonContainer>{props.children}</ButtonContainer>;
+  return (
+    <ButtonContainer tranY={props.tranY}>{props.children}</ButtonContainer>
+  );
 };
 
 export default LeftSidebarBtnContainer;

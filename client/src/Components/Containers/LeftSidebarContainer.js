@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Container = styled.div`
+const Container = styled.ul`
   height: 95vh;
   width: 30rem;
   display: flex;

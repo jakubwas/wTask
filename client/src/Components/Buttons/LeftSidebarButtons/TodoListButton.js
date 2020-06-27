@@ -3,7 +3,7 @@ import LeftSidebarBtnContainer from "../../Containers/LeftSidebarBtnContainer";
 
 const TodoListButton = () => {
   return (
-    <LeftSidebarBtnContainer>
+    <LeftSidebarBtnContainer tranY={"2px"}>
       <svg
         viewBox="0 0 470.767 470.767"
         style={{ width: "2rem", height: "2rem", marginRight: "1.5rem" }}
