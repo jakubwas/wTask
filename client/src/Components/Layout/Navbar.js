@@ -9,11 +9,15 @@ import InfoButton from "../Buttons/NavbarButtons/InfoButton";
 
 // Styled Components
 const NavigationBar = styled.div`
-  min-height: 5vh;
+  height: 4.3rem;
   background: #316fea;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
 `;
 
 // React Component
