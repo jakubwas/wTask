@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 
 import NavbarButton from "./NavbarButton";
+
+import MenuContext from "../../Context/menuContext";
 
 const Menu = styled.svg`
   display: flex;
@@ -12,9 +14,13 @@ const Menu = styled.svg`
 `;
 
 const BurgerMenu = () => {
+  const menuContext = useContext(MenuContext);
+
+  const { changeLeftSidebarVisibility } = menuContext;
+
   return (
     <div style={{ marginLeft: "7vh" }}>
-      <NavbarButton>
+      <NavbarButton onClick={changeLeftSidebarVisibility}>
         <Menu viewBox="0 0 100 80" width="21" height="21">
           <rect width="100" height="12" />
           <rect y="33" width="100" height="12" />

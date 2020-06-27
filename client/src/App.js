@@ -1,20 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import Navbar from "./Components/Layout/Navbar";
-import AppContainer from "./Components/Containers/AppContainer";
-import LeftSidebar from "./Components/Layout/LeftSidebar";
 
 // Only temporay
-import ContentContainer from "./Components/Containers/ContentContainer";
+import AppContainer from "./Components/Containers/AppContainer";
+
+// Context
+import MenuState from "./Context/MenuState";
 
 const App = () => {
   return (
     <div>
-      <Navbar />
-      <AppContainer>
-        <LeftSidebar />
-        <ContentContainer />
-      </AppContainer>
+      <MenuState>
+        <Navbar />
+        <AppContainer />
+      </MenuState>
     </div>
   );
 };
