@@ -8,17 +8,17 @@ import LeftSidebar from "./LeftSidebar";
 import HabitsEditor from "./HabitsEditor";
 import TodoEditor from "../Layout/TodoEditor";
 // Context API
-import MenuContext from "../../Context/menuContext";
+import DisplayContext from "../../Context/display/displayContext";
 
 // App Content => Sidebars and Editor (without navbar)
 const AppContent = () => {
-  const menuContext = useContext(MenuContext);
+  const displayContext = useContext(DisplayContext);
 
-  const { showLeftSidebar } = menuContext;
+  const { menuVisibility } = displayContext;
 
   return (
     <Router>
-      <CSSTransition in={showLeftSidebar} timeout={350} classNames="content">
+      <CSSTransition in={menuVisibility} timeout={350} classNames="content">
         <AppContainer>
           <LeftSidebar />
           <Switch>

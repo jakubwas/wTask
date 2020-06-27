@@ -1,12 +1,12 @@
 // Types
-import { LEFT_SIDEBAR_SHOW_HIDE } from "./types";
+import { LEFT_SIDEBAR_TOGGLE } from "../types";
 
 export default (state, action) => {
   switch (action.type) {
-    case LEFT_SIDEBAR_SHOW_HIDE:
+    case LEFT_SIDEBAR_TOGGLE:
       return {
         ...state,
-        showLeftSidebar: !action.payload,
+        menuVisibility: !action.payload,
       };
     default:
       return state;

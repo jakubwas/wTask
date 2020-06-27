@@ -4,7 +4,7 @@ import React from "react";
 import Navbar from "./Components/Layout/Navbar";
 import AppContent from "./Components/Layout/AppContent";
 // Context API
-import MenuState from "./Context/MenuState";
+import DisplayState from "./Context/display/DisplayState";
 
 const App = () => {
   return (
@@ -15,10 +15,10 @@ const App = () => {
         overflow: "hidden",
       }}
     >
-      <MenuState>
+      <DisplayState>
         <Navbar />
         <AppContent />
-      </MenuState>
+      </DisplayState>
     </div>
   );
 };

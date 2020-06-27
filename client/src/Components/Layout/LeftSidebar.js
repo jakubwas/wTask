@@ -8,16 +8,16 @@ import LeftSidebarContainer from "../Containers/LeftSidebarContainer";
 import TodoListButton from "../Buttons/LeftSidebarButtons/TodoListButton";
 import HabitsControlButton from "../Buttons/LeftSidebarButtons/HabitsControlButton";
 // Context API
-import MenuContext from "../../Context/menuContext";
+import DisplayContext from "../../Context/display/displayContext";
 
 const LeftSidebar = () => {
-  const menuContext = useContext(MenuContext);
-  const { showLeftSidebar } = menuContext;
+  const displayContext = useContext(DisplayContext);
+  const { menuVisibility } = displayContext;
 
   return (
     <div>
       <CSSTransition
-        in={showLeftSidebar}
+        in={menuVisibility}
         timeout={350}
         appear={true}
         unmountOnExit
