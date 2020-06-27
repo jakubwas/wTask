@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
 
 import Navbar from "./Components/Layout/Navbar";
-
-// Only temporay
-import AppContainer from "./Components/Containers/AppContainer";
+import AppContent from "./Components/Layout/AppContent";
 
 // Context
 import MenuState from "./Context/MenuState";
@@ -13,7 +11,7 @@ const App = () => {
     <div>
       <MenuState>
         <Navbar />
-        <AppContainer />
+        <AppContent />
       </MenuState>
     </div>
   );

@@ -3,11 +3,17 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100%;
-  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const ContentContainer = (props) => {
-  return <Container>{props.children}</Container>;
+  return (
+    <Container>
+      <h1>Hello</h1>
+    </Container>
+  );
 };
 
 export default ContentContainer;
