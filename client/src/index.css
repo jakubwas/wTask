@@ -17,9 +17,14 @@ code {
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   font-size: 62.5%;
+}
+/* Router Links - remove styling */
+.link {
+  color: black;
+  text-decoration: none;
+  pointer-events: all;
 }
 /* Left Sidebar */
 .my-node-enter {

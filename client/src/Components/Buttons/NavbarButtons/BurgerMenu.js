@@ -1,8 +1,9 @@
+// Dependencies
 import React, { useContext } from "react";
 import styled from "styled-components";
-
+// React Components
 import NavbarButton from "./NavbarButton";
-
+// Context API
 import MenuContext from "../../../Context/menuContext";
 
 const Menu = styled.svg`

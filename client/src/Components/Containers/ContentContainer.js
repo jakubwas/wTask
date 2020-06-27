@@ -1,3 +1,4 @@
+// Dependencies
 import React from "react";
 import styled from "styled-components";
 
@@ -9,11 +10,7 @@ const Container = styled.div`
 `;
 
 const ContentContainer = (props) => {
-  return (
-    <Container>
-      <h1>Hello</h1>
-    </Container>
-  );
+  return <Container>{props.children}</Container>;
 };
 
 export default ContentContainer;

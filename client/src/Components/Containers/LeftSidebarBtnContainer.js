@@ -1,3 +1,4 @@
+// Dependencies
 import React from "react";
 import styled from "styled-components";
 
@@ -20,7 +21,8 @@ const ButtonContainer = styled.li`
   &:hover {
     border-top: 2px solid #083358;
     border-bottom: 2px solid #083358;
-    z-index: 1;
+    position: relative;
+    z-index: 11;
   }
 `;
 

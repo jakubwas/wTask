@@ -1,5 +1,6 @@
+// Dependencies
 import React from "react";
-
+// React Components
 import NavbarButton from "./NavbarButton";
 
 const SettingsButton = () => {

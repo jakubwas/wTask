@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
-
+// Dependencies
+import React from "react";
+// React Components
 import Navbar from "./Components/Layout/Navbar";
 import AppContent from "./Components/Layout/AppContent";
-
-// Context
+// Context API
 import MenuState from "./Context/MenuState";
 
 const App = () => {

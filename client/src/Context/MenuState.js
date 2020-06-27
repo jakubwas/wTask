@@ -1,8 +1,9 @@
+// Dependencies
 import React, { useReducer } from "react";
-
+// Context API
 import MenuContext from "./menuContext";
 import MenuReducer from "./menuReducer";
-
+// Types
 import { LEFT_SIDEBAR_SHOW_HIDE } from "./types";
 
 const MenuState = (props) => {
