@@ -21,7 +21,7 @@ code {
 html {
   font-size: 62.5%;
 }
-
+/* Left Sidebar */
 .my-node-enter {
   transform: translateX(-100%);
 }
@@ -34,5 +34,20 @@ html {
 }
 .my-node-exit-active {
   transform: translateX(-100%);
+  transition: all 350ms linear;
+}
+/* Content */
+.content-enter {
+  transform: translateX(-15rem);
+}
+.content-enter-active {
+  transform: translateX(0);
+  transition: all 350ms linear;
+}
+.content-exit {
+  transform: translateX(0);
+}
+.content-exit-active {
+  transform: translateX(-15rem);
   transition: all 350ms linear;
 }

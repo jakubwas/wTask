@@ -7,7 +7,7 @@ import Settings from "../Buttons/SettingsButton";
 import InfoButton from "../Buttons/InfoButton";
 
 const NavigationBar = styled.div`
-  height: 5vh;
+  min-height: 5vh;
   background: #506578;
   display: flex;
   align-items: center;

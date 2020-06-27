@@ -8,7 +8,7 @@ import MenuState from "./Context/MenuState";
 
 const App = () => {
   return (
-    <div>
+    <div style={{ height: "100vh", width: "100vw", overflow: "hidden" }}>
       <MenuState>
         <Navbar />
         <AppContent />

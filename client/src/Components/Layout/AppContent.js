@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import AppContainer from "../Containers/AppContainer";
+import { CSSTransition } from "react-transition-group";
 
 import LeftSidebar from "./LeftSidebar";
 import ContentContainer from "../Containers/ContentContainer";
@@ -12,10 +13,12 @@ const AppContent = () => {
   const { showLeftSidebar } = menuContext;
 
   return (
-    <AppContainer>
-      <LeftSidebar />
-      <ContentContainer />
-    </AppContainer>
+    <CSSTransition in={showLeftSidebar} timeout={350} classNames="content">
+      <AppContainer>
+        <LeftSidebar />
+        <ContentContainer />
+      </AppContainer>
+    </CSSTransition>
   );
 };
 
