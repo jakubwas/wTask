@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { CSSTransition } from "react-transition-group";
 
 import LeftSidebarContainer from "../Containers/LeftSidebarContainer";
+import TodoListButton from "../Buttons/LeftSidebarButtons/TodoListButton";
+import HabitsControlButton from "../Buttons/LeftSidebarButtons/HabitsControlButton";
 
 import MenuContext from "../../Context/menuContext";
 
@@ -20,10 +22,8 @@ const LeftSidebar = () => {
         classNames="my-node"
       >
         <LeftSidebarContainer>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
+          <TodoListButton />
+          <HabitsControlButton />
         </LeftSidebarContainer>
       </CSSTransition>
     </div>

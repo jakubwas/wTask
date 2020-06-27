@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import NavbarButton from "./NavbarButton";
 
-import MenuContext from "../../Context/menuContext";
+import MenuContext from "../../../Context/menuContext";
 
 const Menu = styled.svg`
   display: flex;

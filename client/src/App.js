@@ -13,7 +13,6 @@ const App = () => {
         height: "100vh",
         width: "100vw",
         overflow: "hidden",
-        border: "7px solid black",
       }}
     >
       <MenuState>

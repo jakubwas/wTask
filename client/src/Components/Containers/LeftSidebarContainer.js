@@ -6,8 +6,9 @@ const Container = styled.div`
   width: 30rem;
   display: flex;
   flex-direction: column;
-  padding: 5rem 0 0 5rem;
-  background: #d9dad7;
+  padding: 5rem 0 0 7vh;
+  background: rgba(12, 12, 12, 0.05);
+  overflow: hidden;
 `;
 
 const LeftSidebarContainer = (props) => {
