@@ -13,7 +13,7 @@ const AppContent = () => {
 
   return (
     <AppContainer>
-      {showLeftSidebar && <LeftSidebar />}
+      <LeftSidebar />
       <ContentContainer />
     </AppContainer>
   );

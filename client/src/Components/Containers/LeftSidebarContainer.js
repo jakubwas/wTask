@@ -7,7 +7,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 5rem 0 0 5rem;
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(224, 224, 224, 0.99);
 `;
 
 const LeftSidebarContainer = (props) => {
