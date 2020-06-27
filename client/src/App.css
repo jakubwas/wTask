@@ -27,32 +27,35 @@ html {
   pointer-events: all;
 }
 /* Left Sidebar */
-.my-node-enter {
+.menu-enter {
   transform: translateX(-100%);
 }
-.my-node-enter-active {
+.menu-enter-active {
   transform: translateX(0);
   transition: all 350ms linear;
 }
-.my-node-exit {
+.menu-exit {
   transform: translateX(0);
 }
-.my-node-exit-active {
+.menu-exit-active {
   transform: translateX(-100%);
   transition: all 350ms linear;
 }
 /* Content */
 .content-enter {
-  transform: translateX(-15rem);
+  margin-left: 0rem !important;
 }
 .content-enter-active {
-  transform: translateX(0);
+  margin-left: 30rem !important;
   transition: all 350ms linear;
 }
 .content-exit {
-  transform: translateX(0);
+  margin-left: 30rem !important;
 }
 .content-exit-active {
-  transform: translateX(-15rem);
+  margin-left: 0rem !important;
   transition: all 350ms linear;
+}
+.content-exit-done {
+  margin-left: 0rem !important;
 }

@@ -21,7 +21,7 @@ const LeftSidebar = () => {
         timeout={350}
         appear={true}
         unmountOnExit
-        classNames="my-node"
+        classNames="menu"
       >
         <LeftSidebarContainer>
           <Link to="/" className="link">

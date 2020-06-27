@@ -10,6 +10,9 @@ const Container = styled.ul`
   padding: 5rem 0 0 7vh;
   background: rgba(12, 12, 12, 0.05);
   overflow: hidden;
+  position: fixed;
+  top: 6vh;
+  left: 0;
 `;
 
 const LeftSidebarContainer = (props) => {

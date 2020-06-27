@@ -18,15 +18,15 @@ const AppContent = () => {
 
   return (
     <Router>
-      <CSSTransition in={menuVisibility} timeout={350} classNames="content">
-        <AppContainer>
-          <LeftSidebar />
+      <AppContainer>
+        <LeftSidebar />
+        <CSSTransition in={menuVisibility} timeout={350} classNames="content">
           <Switch>
             <Route exact path="/" component={TodoEditor} />
             <Route exact path="/habits-control" component={HabitsEditor} />
           </Switch>
-        </AppContainer>
-      </CSSTransition>
+        </CSSTransition>
+      </AppContainer>
     </Router>
   );
 };
