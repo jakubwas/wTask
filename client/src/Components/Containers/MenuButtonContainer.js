@@ -26,10 +26,10 @@ const ButtonContainer = styled.li`
   }
 `;
 
-const LeftSidebarBtnContainer = (props) => {
+const MenuButtonContainer = (props) => {
   return (
     <ButtonContainer tranY={props.tranY}>{props.children}</ButtonContainer>
   );
 };
 
-export default LeftSidebarBtnContainer;
+export default MenuButtonContainer;

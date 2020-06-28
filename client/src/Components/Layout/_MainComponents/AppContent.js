@@ -4,7 +4,7 @@ import { CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // React Components
 import AppContainer from "../../Containers/AppContainer";
-import LeftSidebar from "./LeftSidebar";
+import Menu from "./Menu";
 import HabitsEditor from "./HabitsEditor";
 import TodoEditor from "./TodoEditor";
 import SettingsDropDown from "./SettingsDropDown";
@@ -20,7 +20,7 @@ const AppContent = () => {
   return (
     <Router>
       <AppContainer>
-        <LeftSidebar />
+        <Menu />
         {settingsVisibility && <SettingsDropDown />}
         <CSSTransition in={menuVisibility} timeout={350} classNames="content">
           <Switch>

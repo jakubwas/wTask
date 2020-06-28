@@ -15,8 +15,8 @@ const Container = styled.ul`
   left: 0;
 `;
 
-const LeftSidebarContainer = (props) => {
+const MenuContainer = (props) => {
   return <Container>{props.children}</Container>;
 };
 
-export default LeftSidebarContainer;
+export default MenuContainer;

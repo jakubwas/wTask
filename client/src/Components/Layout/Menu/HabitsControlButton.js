@@ -1,10 +1,10 @@
 // Dependencies
 import React from "react";
-import LeftSidebarBtnContainer from "../../Containers/LeftSidebarBtnContainer";
+import MenuButtonContainer from "../../Containers/MenuButtonContainer";
 
 const HabitsControlButton = () => {
   return (
-    <LeftSidebarBtnContainer>
+    <MenuButtonContainer>
       <svg
         viewBox="0 0 512 512"
         height="2rem"
@@ -21,7 +21,7 @@ const HabitsControlButton = () => {
         </g>
       </svg>
       Habits Control
-    </LeftSidebarBtnContainer>
+    </MenuButtonContainer>
   );
 };
 

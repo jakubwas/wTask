@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { CSSTransition } from "react-transition-group";
 import { Link } from "react-router-dom";
 // React Components
-import LeftSidebarContainer from "../../Containers/LeftSidebarContainer";
+import MenuContainer from "../../Containers/MenuContainer";
 import TodoListButton from "../Menu/TodoListButton";
 import HabitsControlButton from "../Menu/HabitsControlButton";
 // Context API
@@ -23,14 +23,14 @@ const Menu = () => {
         unmountOnExit
         classNames="menu"
       >
-        <LeftSidebarContainer>
+        <MenuContainer>
           <Link to="/" className="link">
             <TodoListButton />
           </Link>
           <Link to="/habits-control" className="link">
             <HabitsControlButton />
           </Link>
-        </LeftSidebarContainer>
+        </MenuContainer>
       </CSSTransition>
     </div>
   );

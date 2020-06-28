@@ -1,10 +1,10 @@
 // Dependencies
 import React from "react";
-import LeftSidebarBtnContainer from "../../Containers/LeftSidebarBtnContainer";
+import MenuButtonContainer from "../../Containers/MenuButtonContainer";
 
 const TodoListButton = () => {
   return (
-    <LeftSidebarBtnContainer tranY={"2px"}>
+    <MenuButtonContainer tranY={"2px"}>
       <svg
         viewBox="0 0 470.767 470.767"
         style={{ width: "2rem", height: "2rem", marginRight: "1.5rem" }}
@@ -44,7 +44,7 @@ const TodoListButton = () => {
         />
       </svg>
       Todo List
-    </LeftSidebarBtnContainer>
+    </MenuButtonContainer>
   );
 };
 
