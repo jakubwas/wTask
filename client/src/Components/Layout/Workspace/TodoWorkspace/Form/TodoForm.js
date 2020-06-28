@@ -3,6 +3,8 @@ import React from "react";
 import styled from "styled-components";
 // React Components
 import SubmitTaskButton from "./SubmitTaskButton";
+import FormInput from "./FormInput";
+import FormPriority from "./FormPriority";
 
 const Form = styled.form`
   width: 100%;
@@ -13,29 +15,13 @@ const InputAndPriorityContainer = styled.div`
   display: flex;
   width: 100%;
 `;
-const Input = styled.input`
-  width: 70%;
-  height: 3.3rem;
-  font-size: 1.4rem;
-  padding: 2rem 1.2rem;
-  border: 1px solid rgba(0, 0, 0, 0.28);
-  border-right: none;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  outline: none;
-`;
-const PriorityContainer = styled.div`
-  width: 30%;
-  border: 1px solid black;
-  height: 3.3rem;
-`;
 
 const TodoForm = () => {
   return (
     <Form>
       <InputAndPriorityContainer>
-        <Input placeholder="e.g. Hit a gym" />
-        <PriorityContainer />
+        <FormInput />
+        <FormPriority />
       </InputAndPriorityContainer>
       <SubmitTaskButton />
     </Form>
