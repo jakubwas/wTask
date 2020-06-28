@@ -6,7 +6,7 @@ const Container = styled.div`
   width: 100%;
   height: 3rem;
   padding: 0.5rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   display: flex;
   cursor: pointer;
 

@@ -21,6 +21,10 @@ code {
 html {
   font-size: 62.5%;
 }
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+}
 ::-webkit-scrollbar-track {
   background: #4592af;
 }
