@@ -3,142 +3,15 @@ import React from "react";
 // React Components
 import EditorContainer from "../../Containers/EditorContainer";
 import WorkspaceContainer from "../../Containers/WorkspaceContainer";
+import TodoWorkspaceHeader from "../Workspace/TodoWorkspace/TodoWorkspaceHeader";
+import TodoForm from "../Workspace/TodoWorkspace/TodoForm";
 
 const TodoEditor = () => {
   return (
     <EditorContainer>
       <WorkspaceContainer>
-        <h1>Todo Editor 1</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
-        <h1>Todo Editor</h1>
+        <TodoWorkspaceHeader />
+        <TodoForm />
       </WorkspaceContainer>
     </EditorContainer>
   );

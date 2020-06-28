@@ -10,7 +10,7 @@ import InfoButton from "../Navbar/InfoButton";
 // Styled Components
 const NavigationBar = styled.div`
   height: 4.3rem;
-  background: #316fea;
+  background: #1a2639;
   display: flex;
   align-items: center;
   justify-content: space-between;
