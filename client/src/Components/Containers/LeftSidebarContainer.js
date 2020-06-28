@@ -11,7 +11,7 @@ const Container = styled.ul`
   background: rgba(12, 12, 12, 0.05);
   overflow: hidden;
   position: fixed;
-  top: 6vh;
+  top: 4.3rem;
   left: 0;
 `;
 

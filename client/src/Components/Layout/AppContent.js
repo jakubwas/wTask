@@ -7,6 +7,7 @@ import AppContainer from "../Containers/AppContainer";
 import LeftSidebar from "./LeftSidebar";
 import HabitsEditor from "./HabitsEditor";
 import TodoEditor from "../Layout/TodoEditor";
+import SettingsDropDown from "./SettingsDropDown";
 // Context API
 import DisplayContext from "../../Context/display/displayContext";
 
@@ -14,12 +15,13 @@ import DisplayContext from "../../Context/display/displayContext";
 const AppContent = () => {
   const displayContext = useContext(DisplayContext);
 
-  const { menuVisibility } = displayContext;
+  const { menuVisibility, settingsVisibility } = displayContext;
 
   return (
     <Router>
       <AppContainer>
         <LeftSidebar />
+        {settingsVisibility && <SettingsDropDown />}
         <CSSTransition in={menuVisibility} timeout={350} classNames="content">
           <Switch>
             <Route exact path="/" component={TodoEditor} />

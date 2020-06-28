@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
@@ -19,6 +20,15 @@ code {
 }
 html {
   font-size: 62.5%;
+}
+::-webkit-scrollbar-track {
+  background: #4592af;
+}
+::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+::-webkit-scrollbar {
+  width: 5px;
 }
 /* Router Links - remove styling */
 .link {

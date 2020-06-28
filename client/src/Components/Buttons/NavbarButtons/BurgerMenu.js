@@ -21,7 +21,7 @@ const BurgerMenu = () => {
 
   return (
     <div style={{ marginLeft: "7vh" }}>
-      <NavbarButton onClick={toggleMenuVisibility}>
+      <NavbarButton onClickHandler={toggleMenuVisibility}>
         <Menu viewBox="0 0 100 80" width="21" height="21">
           <rect width="100" height="12" />
           <rect y="33" width="100" height="12" />

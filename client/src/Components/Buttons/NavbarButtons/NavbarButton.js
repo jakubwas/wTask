@@ -20,7 +20,7 @@ const Button = styled.button`
 `;
 
 const NavbarButton = (props) => {
-  return <Button onClick={props.onClick}>{props.children}</Button>;
+  return <Button onClick={props.onClickHandler}>{props.children}</Button>;
 };
 
 export default NavbarButton;

@@ -1,12 +1,17 @@
 // Dependencies
-import React from "react";
+import React, { useContext } from "react";
 // React Components
 import NavbarButton from "./NavbarButton";
+// Context API
+import DisplayContext from "../../../Context/display/displayContext";
 
 const SettingsButton = () => {
+  const displayContext = useContext(DisplayContext);
+  const { toggleSettingsVisibility } = displayContext;
+
   return (
     <div>
-      <NavbarButton>
+      <NavbarButton onClickHandler={toggleSettingsVisibility}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 128 128"
