@@ -4,13 +4,13 @@ import styled from "styled-components";
 import { CSSTransition } from "react-transition-group";
 import { Link } from "react-router-dom";
 // React Components
-import LeftSidebarContainer from "../Containers/LeftSidebarContainer";
-import TodoListButton from "../Buttons/LeftSidebarButtons/TodoListButton";
-import HabitsControlButton from "../Buttons/LeftSidebarButtons/HabitsControlButton";
+import LeftSidebarContainer from "../../Containers/LeftSidebarContainer";
+import TodoListButton from "../Menu/TodoListButton";
+import HabitsControlButton from "../Menu/HabitsControlButton";
 // Context API
-import DisplayContext from "../../Context/display/displayContext";
+import DisplayContext from "../../../Context/display/displayContext";
 
-const LeftSidebar = () => {
+const Menu = () => {
   const displayContext = useContext(DisplayContext);
   const { menuVisibility } = displayContext;
 
@@ -36,4 +36,4 @@ const LeftSidebar = () => {
   );
 };
 
-export default LeftSidebar;
+export default Menu;

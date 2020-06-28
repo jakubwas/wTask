@@ -1,6 +1,6 @@
 // Dependencies
 import React from "react";
-import ContentContainer from "../Containers/ContentContainer";
+import ContentContainer from "../../Containers/ContentContainer";
 
 const HabitsEditor = () => {
   return (

@@ -2,10 +2,10 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 // Components
-import BurgerMenu from "../Buttons/NavbarButtons/BurgerMenu";
-import RightSideNavIcon from "../Containers/RightSideNavIcons";
-import Settings from "../Buttons/NavbarButtons/SettingsButton";
-import InfoButton from "../Buttons/NavbarButtons/InfoButton";
+import BurgerMenu from "../Navbar/BurgerMenu";
+import RightSideNavIcon from "../../Containers/RightSideNavIcons";
+import Settings from "../Navbar/SettingsButton";
+import InfoButton from "../Navbar/InfoButton";
 
 // Styled Components
 const NavigationBar = styled.div`

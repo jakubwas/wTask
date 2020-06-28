@@ -1,8 +1,8 @@
 // Dependencies
 import React, { Fragment } from "react";
 // React Components
-import Navbar from "./Components/Layout/Navbar";
-import AppContent from "./Components/Layout/AppContent";
+import Navbar from "./Components/Layout/_MainComponents/Navbar";
+import AppContent from "./Components/Layout/_MainComponents/AppContent";
 // Context API
 import DisplayState from "./Context/display/DisplayState";
 

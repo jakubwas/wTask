@@ -1,7 +1,7 @@
 // Dependencies
 import React from "react";
 // React Components
-import ContentContainer from "../Containers/ContentContainer";
+import ContentContainer from "../../Containers/ContentContainer";
 
 const TodoEditor = () => {
   return (

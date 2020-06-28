@@ -2,11 +2,11 @@
 import React from "react";
 import styled from "styled-components";
 // React Components
-import FeaturePreviewButton from "../Buttons/SettingsButtons/FeaturePreviewButton";
-import SupportButton from "../Buttons/SettingsButtons/SupportButton";
-import SourceCodeButton from "../Buttons/SettingsButtons/SourceCodeButton";
-import SettingsButton from "../Buttons/SettingsButtons/SettingsButton";
-import LogoutButton from "../Buttons/SettingsButtons/LogoutButton";
+import FeaturePreviewButton from "../SettingsDropDown/FeaturePreviewButton";
+import SupportButton from "../SettingsDropDown/SupportButton";
+import SourceCodeButton from "../SettingsDropDown/SourceCodeButton";
+import SettingsButton from "../SettingsDropDown/SettingsButton";
+import LogoutButton from "../SettingsDropDown/LogoutButton";
 
 const Container = styled.div`
   position: fixed;

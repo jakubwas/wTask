@@ -3,13 +3,13 @@ import React, { useContext } from "react";
 import { CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // React Components
-import AppContainer from "../Containers/AppContainer";
+import AppContainer from "../../Containers/AppContainer";
 import LeftSidebar from "./LeftSidebar";
 import HabitsEditor from "./HabitsEditor";
-import TodoEditor from "../Layout/TodoEditor";
+import TodoEditor from "./TodoEditor";
 import SettingsDropDown from "./SettingsDropDown";
 // Context API
-import DisplayContext from "../../Context/display/displayContext";
+import DisplayContext from "../../../Context/display/displayContext";
 
 // App Content => Sidebars and Editor (without navbar)
 const AppContent = () => {
