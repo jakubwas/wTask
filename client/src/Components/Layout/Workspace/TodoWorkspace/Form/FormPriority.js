@@ -1,8 +1,9 @@
 // Dependencies
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 // React Components
 import PriorityButton from "./PriorityButton";
+import TodoContext from "../../../../../Context/todo/todoContext";
 
 const PriorityContainer = styled.div`
   border: 1px solid black;
@@ -19,15 +20,31 @@ const PriorityContainer = styled.div`
 `;
 
 const FormPriority = () => {
+  const todoContext = useContext(TodoContext);
+
+  const { taskPriority } = todoContext;
+
   return (
     <PriorityContainer>
       <span style={{ marginRight: "1rem" }}>Priority</span>
       {/* Priority : Low */}
-      <PriorityButton />
+      {taskPriority > 0 ? (
+        <PriorityButton fill="blue" priorityValue={1} />
+      ) : (
+        <PriorityButton fill="black" priorityValue={1} />
+      )}
       {/* Priority : Medium */}
-      <PriorityButton />
+      {taskPriority > 1 ? (
+        <PriorityButton fill="blue" priorityValue={2} />
+      ) : (
+        <PriorityButton fill="black" priorityValue={2} />
+      )}
       {/* Priority : High */}
-      <PriorityButton />
+      {taskPriority > 2 ? (
+        <PriorityButton fill="blue" priorityValue={3} />
+      ) : (
+        <PriorityButton fill="black" priorityValue={3} />
+      )}
     </PriorityContainer>
   );
 };

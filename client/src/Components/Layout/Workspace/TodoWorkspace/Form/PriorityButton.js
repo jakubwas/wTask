@@ -1,8 +1,10 @@
 // Dependencies
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 // React Components
 import PriorityIcon from "./PriorityIcon";
+// Context API
+import TodoContext from "../../../../../Context/todo/todoContext";
 
 const Button = styled.button`
   padding: 0.2rem;
@@ -16,10 +18,19 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const PriorityButton = () => {
+const PriorityButton = ({ fill, priorityValue }) => {
+  const todoContext = useContext(TodoContext);
+
+  const { updateTaskPriority } = todoContext;
+
   return (
-    <Button>
-      <PriorityIcon />
+    <Button
+      onClick={(e) => {
+        e.preventDefault();
+        updateTaskPriority(priorityValue);
+      }}
+    >
+      <PriorityIcon fill={fill} />
     </Button>
   );
 };

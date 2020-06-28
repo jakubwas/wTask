@@ -5,14 +5,17 @@ import Navbar from "./Components/Layout/_MainComponents/Navbar";
 import AppContent from "./Components/Layout/_MainComponents/AppContent";
 // Context API
 import DisplayState from "./Context/display/DisplayState";
+import TodoState from "./Context/todo/TodoState";
 
 const App = () => {
   return (
     <Fragment>
-      <DisplayState>
-        <Navbar />
-        <AppContent />
-      </DisplayState>
+      <TodoState>
+        <DisplayState>
+          <Navbar />
+          <AppContent />
+        </DisplayState>
+      </TodoState>
     </Fragment>
   );
 };

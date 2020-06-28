@@ -1,2 +1,3 @@
 export const MENU_TOGGLE = "MENU_TOGGLE";
 export const SETTINGS_TOGGLE = "SETTINGS_TOGGLE";
+export const UPDATE_PRIORITY = "UPDATE_PRIORITY";
