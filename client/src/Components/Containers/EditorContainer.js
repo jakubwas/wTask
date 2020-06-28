@@ -3,17 +3,15 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 80%;
-  max-width: 90rem;
-  margin-top: 4rem;
+  margin-left: 30rem;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 `;
 
-const TodoEditorContainer = (props) => {
+const EditorContainer = (props) => {
   return <Container>{props.children}</Container>;
 };
 
-export default TodoEditorContainer;
+export default EditorContainer;

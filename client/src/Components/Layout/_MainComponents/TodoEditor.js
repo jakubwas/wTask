@@ -1,19 +1,13 @@
 // Dependencies
 import React from "react";
 // React Components
-import ContentContainer from "../../Containers/ContentContainer";
+import EditorContainer from "../../Containers/EditorContainer";
+import WorkspaceContainer from "../../Containers/WorkspaceContainer";
 
 const TodoEditor = () => {
   return (
-    <ContentContainer>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          margnTop: "10rem",
-        }}
-      >
+    <EditorContainer>
+      <WorkspaceContainer>
         <h1>Todo Editor 1</h1>
         <h1>Todo Editor</h1>
         <h1>Todo Editor</h1>
@@ -145,8 +139,8 @@ const TodoEditor = () => {
         <h1>Todo Editor</h1>
         <h1>Todo Editor</h1>
         <h1>Todo Editor</h1>
-      </div>
-    </ContentContainer>
+      </WorkspaceContainer>
+    </EditorContainer>
   );
 };
 

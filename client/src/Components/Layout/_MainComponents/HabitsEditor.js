@@ -1,12 +1,14 @@
 // Dependencies
 import React from "react";
-import ContentContainer from "../../Containers/ContentContainer";
+// React Components
+import EditorContainer from "../../Containers/EditorContainer";
+import WorkspaceContainer from "../../Containers/WorkspaceContainer";
 
 const HabitsEditor = () => {
   return (
-    <ContentContainer>
+    <EditorContainer>
       <h1>Habits Editor</h1>
-    </ContentContainer>
+    </EditorContainer>
   );
 };
 
