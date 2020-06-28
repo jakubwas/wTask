@@ -1,5 +1,8 @@
+// Dependencies
 import React from "react";
 import styled from "styled-components";
+// React Components
+import PriorityButton from "./PriorityButton";
 
 const PriorityContainer = styled.div`
   border: 1px solid black;
@@ -16,7 +19,17 @@ const PriorityContainer = styled.div`
 `;
 
 const FormPriority = () => {
-  return <PriorityContainer>Priority</PriorityContainer>;
+  return (
+    <PriorityContainer>
+      <span style={{ marginRight: "1rem" }}>Priority</span>
+      {/* Priority : Low */}
+      <PriorityButton />
+      {/* Priority : Medium */}
+      <PriorityButton />
+      {/* Priority : High */}
+      <PriorityButton />
+    </PriorityContainer>
+  );
 };
 
 export default FormPriority;
