@@ -7,6 +7,7 @@ const Header = styled.div`
   font-weight: 600;
   align-self: flex-start;
   color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 2rem;
 `;
 
 const StatusSectionHeader = (props) => {

@@ -8,6 +8,7 @@ import TodoForm from "../Workspace/TodoWorkspace/Form/TodoForm";
 import UncompletedTasks from "../Workspace/TodoWorkspace/Tasks/UncompletedTasks";
 import CompletedTasks from "../Workspace/TodoWorkspace/Tasks/CompletedTasks";
 import SectionSeparator from "../Workspace/TodoWorkspace/SectionSeparator";
+import Task from "../Workspace/TodoWorkspace/Tasks/Task";
 
 const TodoEditor = () => {
   return (
@@ -17,6 +18,7 @@ const TodoEditor = () => {
         <TodoForm />
         <SectionSeparator />
         <UncompletedTasks />
+        <Task />
         <SectionSeparator />
         <CompletedTasks />
       </WorkspaceContainer>
