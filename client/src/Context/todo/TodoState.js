@@ -6,6 +6,8 @@ import { UPDATE_PRIORITY } from "../types";
 const TodoState = (props) => {
   const initialState = {
     taskPriority: 0,
+    uncompletedTasks: [],
+    completedTasks: [],
   };
 
   const [state, dispatch] = useReducer(TodoReducer, initialState);

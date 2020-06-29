@@ -14,6 +14,7 @@ const Container = styled.button`
   outline: none;
   border-radius: 5px;
   cursor: pointer;
+  opacity: ${(props) => props.opacity};
 
   &:hover {
     background: rgba(0, 0, 0, 0.1);
@@ -21,7 +22,7 @@ const Container = styled.button`
 `;
 
 const TaskButtonContainer = (props) => {
-  return <Container>{props.children}</Container>;
+  return <Container opacity={props.opacity}>{props.children}</Container>;
 };
 
 export default TaskButtonContainer;

@@ -19,6 +19,8 @@ const TodoEditor = () => {
         <SectionSeparator />
         <UncompletedTasks />
         <Task />
+        <Task />
+        <Task />
         <SectionSeparator />
         <CompletedTasks />
       </WorkspaceContainer>
