@@ -25,7 +25,7 @@ const Svg = styled.svg`
   height: 1.2rem;
 `;
 
-const CheckBoxButton = ({ id }) => {
+const CheckBoxButton = ({ id, priority }) => {
   const todoContext = useContext(TodoContext);
   const { toggleStatus } = todoContext;
 

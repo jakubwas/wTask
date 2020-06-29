@@ -48,9 +48,17 @@ export default (state, action) => {
     case TOGGLE_STATUS:
       return {
         ...state,
-        tasks: state.tasks.map((task) =>
-          task.id === action.payload ? { ...task, status: "completed" } : task
-        ),
+        tasks: state.tasks.map((task) => {
+          let taskStatus;
+          if (task.status === "completed") {
+            taskStatus = "uncompleted";
+          } else {
+            taskStatus = "completed";
+          }
+          return task.id === action.payload
+            ? { ...task, status: taskStatus }
+            : task;
+        }),
       };
     default:
       return {
