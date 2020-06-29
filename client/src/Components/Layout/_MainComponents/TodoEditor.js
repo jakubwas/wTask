@@ -2,7 +2,7 @@
 import React from "react";
 // React Components
 import EditorContainer from "../../Containers/EditorContainer";
-import WorkspaceContainer from "../../Containers/WorkspaceContainer";
+import WorkspaceContainer from "../Workspace/WorkspaceContainer";
 import TodoWorkspaceHeader from "../Workspace/TodoWorkspace/TodoWorkspaceHeader";
 import TodoForm from "../Workspace/TodoWorkspace/Form/TodoForm";
 import UncompletedTasks from "../Workspace/TodoWorkspace/Tasks/UncompletedTasks";

@@ -1,6 +1,6 @@
 // Dependencies
 import React from "react";
-import MenuButtonContainer from "../../Containers/MenuButtonContainer";
+import MenuButtonContainer from "./MenuButtonContainer";
 
 const HabitsControlButton = () => {
   return (

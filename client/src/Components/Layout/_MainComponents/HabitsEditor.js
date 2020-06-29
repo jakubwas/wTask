@@ -2,7 +2,6 @@
 import React from "react";
 // React Components
 import EditorContainer from "../../Containers/EditorContainer";
-import WorkspaceContainer from "../../Containers/WorkspaceContainer";
 
 const HabitsEditor = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import SettingsButtonContainer from "../../Containers/SettingsButtonContainer";
+import SettingsButtonContainer from "./SettingsButtonContainer";
 
 const LogoutButton = () => {
   return (

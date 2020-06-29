@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 // Components
 import BurgerMenu from "../Navbar/BurgerMenu";
-import RightSideNavIcon from "../../Containers/RightSideNavIcons";
+import RightSideNavIcon from "../Navbar/RightSideNavIcons";
 import Settings from "../Navbar/SettingsButton";
 import InfoButton from "../Navbar/InfoButton";
 

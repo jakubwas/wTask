@@ -31,19 +31,19 @@ const FormPriority = () => {
       {taskPriority > 0 ? (
         <PriorityButton fill="blue" priorityValue={1} />
       ) : (
-        <PriorityButton fill="black" priorityValue={1} />
+        <PriorityButton fill="rgba(0, 0, 0, 0.15)" priorityValue={1} />
       )}
       {/* Priority : Medium */}
       {taskPriority > 1 ? (
         <PriorityButton fill="blue" priorityValue={2} />
       ) : (
-        <PriorityButton fill="black" priorityValue={2} />
+        <PriorityButton fill="rgba(0, 0, 0, 0.15)" priorityValue={2} />
       )}
       {/* Priority : High */}
       {taskPriority > 2 ? (
         <PriorityButton fill="blue" priorityValue={3} />
       ) : (
-        <PriorityButton fill="black" priorityValue={3} />
+        <PriorityButton fill="rgba(0, 0, 0, 0.15)" priorityValue={3} />
       )}
     </PriorityContainer>
   );
