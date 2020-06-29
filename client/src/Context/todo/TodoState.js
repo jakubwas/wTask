@@ -1,24 +1,49 @@
 import React, { useReducer } from "react";
 import TodoReducer from "./todoReducer";
 import TodoContext from "./todoContext";
-import { UPDATE_PRIORITY } from "../types";
+import {
+  SET_PRIORITY,
+  GET_CURRENT_INPUT_VALUE,
+  CLEAR_FORM,
+  ADD_NEW_TASK,
+} from "../types";
 
 const TodoState = (props) => {
   const initialState = {
     taskPriority: 0,
-    uncompletedTasks: [],
-    completedTasks: [],
+    currentInputValue: "",
+    tasks: [],
   };
 
   const [state, dispatch] = useReducer(TodoReducer, initialState);
 
   // Methods
 
-  // Update Form Priority
-  const updateTaskPriority = (priorityValue) => {
+  // Set Form's Priority
+  const setTaskPriority = (priorityValue) => {
     dispatch({
-      type: UPDATE_PRIORITY,
+      type: SET_PRIORITY,
       payload: priorityValue,
+    });
+  };
+  // Get current Form Input Value
+  const getCurrentInputValue = (inputText) => {
+    dispatch({
+      type: GET_CURRENT_INPUT_VALUE,
+      payload: inputText,
+    });
+  };
+  // Clear Form (Priority and Input)
+  const clearForm = () => {
+    dispatch({
+      type: CLEAR_FORM,
+    });
+  };
+  // Add new Task
+  const addNewTask = () => {
+    console.log(state.tasks);
+    dispatch({
+      type: ADD_NEW_TASK,
     });
   };
 
@@ -26,7 +51,11 @@ const TodoState = (props) => {
     <TodoContext.Provider
       value={{
         taskPriority: state.taskPriority,
-        updateTaskPriority,
+        currentInputValue: state.currentInputValue,
+        setTaskPriority,
+        getCurrentInputValue,
+        clearForm,
+        addNewTask,
       }}
     >
       {props.children}

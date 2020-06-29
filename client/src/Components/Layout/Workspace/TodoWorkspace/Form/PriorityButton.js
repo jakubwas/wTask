@@ -21,13 +21,13 @@ const Button = styled.button`
 const PriorityButton = ({ fill, priorityValue }) => {
   const todoContext = useContext(TodoContext);
 
-  const { updateTaskPriority } = todoContext;
+  const { setTaskPriority } = todoContext;
 
   return (
     <Button
       onClick={(e) => {
         e.preventDefault();
-        updateTaskPriority(priorityValue);
+        setTaskPriority(priorityValue);
       }}
     >
       <PriorityIcon fill={fill} />
