@@ -3,8 +3,11 @@ import React from "react";
 // React Components
 import EditorContainer from "../../Containers/EditorContainer";
 import WorkspaceContainer from "../../Containers/WorkspaceContainer";
-import TodoWorkspaceHeader from "../Workspace/TodoWorkspace//Form/TodoWorkspaceHeader";
+import TodoWorkspaceHeader from "../Workspace/TodoWorkspace/TodoWorkspaceHeader";
 import TodoForm from "../Workspace/TodoWorkspace/Form/TodoForm";
+import UncompletedTasks from "../Workspace/TodoWorkspace/Tasks/UncompletedTasks";
+import CompletedTasks from "../Workspace/TodoWorkspace/Tasks/CompletedTasks";
+import SectionSeparator from "../Workspace/TodoWorkspace/SectionSeparator";
 
 const TodoEditor = () => {
   return (
@@ -12,6 +15,10 @@ const TodoEditor = () => {
       <WorkspaceContainer>
         <TodoWorkspaceHeader />
         <TodoForm />
+        <SectionSeparator />
+        <UncompletedTasks />
+        <SectionSeparator />
+        <CompletedTasks />
       </WorkspaceContainer>
     </EditorContainer>
   );
