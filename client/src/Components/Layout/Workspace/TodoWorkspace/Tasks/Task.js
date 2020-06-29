@@ -20,7 +20,7 @@ const TextContainer = styled.div`
   line-height: 2rem;
 `;
 
-const Task = () => {
+const Task = ({ task }) => {
   const [taskBtnsOpacity, setTaskBtnsOpacity] = useState(0);
   return (
     <TaskContainer
@@ -31,8 +31,8 @@ const Task = () => {
         setTaskBtnsOpacity(0);
       }}
     >
-      <CheckBoxButton />
-      <TextContainer>Hit a gym</TextContainer>
+      <CheckBoxButton id={task.id} />
+      <TextContainer>{task.name}</TextContainer>
       <EditButton opacity={taskBtnsOpacity} />
       <TrashButton opacity={taskBtnsOpacity} />
     </TaskContainer>

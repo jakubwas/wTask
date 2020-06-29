@@ -3,6 +3,7 @@ import {
   GET_CURRENT_INPUT_VALUE,
   CLEAR_FORM,
   ADD_NEW_TASK,
+  TOGGLE_STATUS,
 } from "../types";
 
 export default (state, action) => {
@@ -29,7 +30,12 @@ export default (state, action) => {
       return {
         ...state,
         tasks: [
-          { name: state.currentInputValue, priority: state.taskPriority },
+          {
+            id: action.payload,
+            name: state.currentInputValue,
+            priority: state.taskPriority,
+            status: "uncompleted",
+          },
           ...state.tasks,
         ],
       };
@@ -38,6 +44,13 @@ export default (state, action) => {
         ...state,
         currentInputValue: "",
         taskPriority: 0,
+      };
+    case TOGGLE_STATUS:
+      return {
+        ...state,
+        tasks: state.tasks.map((task) =>
+          task.id === action.payload ? { ...task, status: "completed" } : task
+        ),
       };
     default:
       return {

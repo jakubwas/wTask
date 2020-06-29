@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
+import TodoContext from "../../../../../Context/todo/todoContext";
 
 const Container = styled.button`
   width: 2rem;
@@ -24,7 +25,10 @@ const Svg = styled.svg`
   height: 1.2rem;
 `;
 
-const CheckBoxButton = () => {
+const CheckBoxButton = ({ id }) => {
+  const todoContext = useContext(TodoContext);
+  const { toggleStatus } = todoContext;
+
   const [svgDsiaply, setSvgDisplay] = useState("none");
 
   return (
@@ -34,6 +38,10 @@ const CheckBoxButton = () => {
       }}
       onMouseLeave={() => {
         setSvgDisplay("none");
+      }}
+      onClick={() => {
+        console.log("aaaa");
+        toggleStatus(id);
       }}
     >
       <Svg

@@ -18,9 +18,6 @@ const TodoEditor = () => {
         <TodoForm />
         <SectionSeparator />
         <UncompletedTasks />
-        <Task />
-        <Task />
-        <Task />
         <SectionSeparator />
         <CompletedTasks />
       </WorkspaceContainer>

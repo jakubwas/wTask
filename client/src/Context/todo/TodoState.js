@@ -1,4 +1,6 @@
+// Dependencies
 import React, { useReducer } from "react";
+import { v4 as uuidv4 } from "uuid";
 import TodoReducer from "./todoReducer";
 import TodoContext from "./todoContext";
 import {
@@ -6,6 +8,7 @@ import {
   GET_CURRENT_INPUT_VALUE,
   CLEAR_FORM,
   ADD_NEW_TASK,
+  TOGGLE_STATUS,
 } from "../types";
 
 const TodoState = (props) => {
@@ -42,8 +45,17 @@ const TodoState = (props) => {
   // Add new Task
   const addNewTask = () => {
     console.log(state.tasks);
+    let id = uuidv4();
     dispatch({
       type: ADD_NEW_TASK,
+      payload: id,
+    });
+  };
+  // Toggle status
+  const toggleStatus = (id) => {
+    dispatch({
+      type: TOGGLE_STATUS,
+      payload: id,
     });
   };
 
@@ -52,10 +64,12 @@ const TodoState = (props) => {
       value={{
         taskPriority: state.taskPriority,
         currentInputValue: state.currentInputValue,
+        tasks: state.tasks,
         setTaskPriority,
         getCurrentInputValue,
         clearForm,
         addNewTask,
+        toggleStatus,
       }}
     >
       {props.children}
