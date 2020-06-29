@@ -16,7 +16,7 @@ const SubmitButton = styled.button`
   font-weight: 600;
   color: white;
   border-radius: 5px;
-  background: rgba(26, 38, 57, 1);
+  background: ${(props) => props.bg};
   cursor: pointer;
   outline: none;
 `;
@@ -35,14 +35,24 @@ const ClearButton = styled.button`
 const FormButtons = () => {
   const todoContext = useContext(TodoContext);
 
-  const { clearForm } = todoContext;
+  const { taskPriority, currentInputValue, clearForm } = todoContext;
 
   return (
     <ButtonsContainer>
-      <SubmitButton type="submit">Add Task</SubmitButton>
-      <ClearButton type="button" onClick={clearForm}>
-        Clear
-      </ClearButton>
+      {currentInputValue.length > 0 ? (
+        <SubmitButton type="submit" bg={"rgba(26, 38, 57, 1)"}>
+          Add Task
+        </SubmitButton>
+      ) : (
+        <SubmitButton type="button" bg={"rgba(26,38,57, 0.3)"}>
+          Add Task
+        </SubmitButton>
+      )}
+      {(currentInputValue.length > 0 || taskPriority > 0) && (
+        <ClearButton type="button" onClick={clearForm}>
+          Clear
+        </ClearButton>
+      )}
     </ButtonsContainer>
   );
 };
