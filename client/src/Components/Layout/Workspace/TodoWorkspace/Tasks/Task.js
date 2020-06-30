@@ -31,7 +31,11 @@ const Task = ({ task }) => {
         setTaskBtnsOpacity(0);
       }}
     >
-      <CheckBoxButton id={task.id} />
+      <CheckBoxButton
+        id={task.id}
+        priority={task.priority}
+        status={task.status}
+      />
       <TextContainer>{task.name}</TextContainer>
       <EditButton opacity={taskBtnsOpacity} />
       <TrashButton opacity={taskBtnsOpacity} />

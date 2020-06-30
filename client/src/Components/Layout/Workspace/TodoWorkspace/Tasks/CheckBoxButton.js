@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { Fragment, useState, useContext, useEffect } from "react";
 import styled from "styled-components";
 import TodoContext from "../../../../../Context/todo/todoContext";
 
@@ -7,8 +7,8 @@ const Container = styled.button`
   height: 2rem;
   border-radius: 2rem;
   margin: 1.2rem 1.2rem 0 0;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  background: white;
+  border: ${(props) => props.border};
+  background: ${(props) => props.bgColor};
   outline: none;
   display: flex;
   align-items: center;
@@ -16,23 +16,83 @@ const Container = styled.button`
   cursor: pointer;
 
   &:hover {
-    background: rgba(0, 0, 0, 0.1);
+    background: ${(props) => props.bgHover};
   }
 `;
 
 const Svg = styled.svg`
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 0.9rem;
+  height: 0.9rem;
 `;
 
-const CheckBoxButton = ({ id, priority }) => {
+const CheckBoxButton = ({ id, priority, status }) => {
   const todoContext = useContext(TodoContext);
   const { toggleStatus } = todoContext;
 
   const [svgDsiaply, setSvgDisplay] = useState("none");
+  const [colorPallete, setColorPalette] = useState({});
+
+  useEffect(() => {
+    switch (priority) {
+      case 0:
+        if (status === "uncompleted") {
+          setColorPalette({
+            border: "1px solid grey",
+            bgColor: "rgb(255, 255, 255, 1)",
+            bgHover: "rgba(0, 0, 0, 0.1)",
+            fill: "rgba(0, 0, 0, 0.5)",
+          });
+        } else {
+          setColorPalette({});
+        }
+        break;
+      case 1:
+        if (status === "uncompleted") {
+          setColorPalette({
+            border: "2px solid rgba(0, 0, 255, 0.8)",
+            bgColor: "rgb(255, 255, 255)",
+            bgHover: "rgba(0, 0, 255, 0.15)",
+            fill: "rgba(0, 0, 255, 0.8)",
+          });
+        } else {
+          setColorPalette({});
+        }
+        break;
+      case 2:
+        if (status === "uncompleted") {
+          setColorPalette({
+            border: "2px solid rgba(219, 147, 64, 0.8)",
+            bgColor: "rgb(255, 255, 255)",
+            bgHover: "rgba(219, 147, 64, 0.15)",
+            fill: "rgba(219, 147, 64, 0.8)",
+          });
+        } else {
+          setColorPalette({});
+        }
+        break;
+      case 3:
+        if (status === "uncompleted") {
+          setColorPalette({
+            border: "2px solid rgba(255, 0, 0, 0.8)",
+            bgColor: "rgb(255, 255, 255)",
+            bgHover: "rgba(255, 0, 0, 0.15)",
+            fill: "rgba(255, 0, 0, 0.8)",
+          });
+        } else {
+          setColorPalette({});
+        }
+        break;
+
+      default:
+        break;
+    }
+  }, []);
 
   return (
     <Container
+      border={colorPallete.border}
+      bgColor={colorPallete.bgColor}
+      bgHover={colorPallete.bgHover}
       onMouseEnter={() => {
         setSvgDisplay("block");
       }}
@@ -49,6 +109,7 @@ const CheckBoxButton = ({ id, priority }) => {
         y="0px"
         viewBox="0 0 512 512"
         style={{ display: `${svgDsiaply}` }}
+        fill={colorPallete.fill}
       >
         <path
           d="M504.502,75.496c-9.997-9.998-26.205-9.998-36.204,0L161.594,382.203L43.702,264.311c-9.997-9.998-26.205-9.997-36.204,0
