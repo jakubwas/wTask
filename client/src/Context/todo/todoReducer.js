@@ -4,6 +4,7 @@ import {
   CLEAR_FORM,
   ADD_NEW_TASK,
   TOGGLE_STATUS,
+  DELETE_SINGLE_TASK,
 } from "../types";
 
 export default (state, action) => {
@@ -59,6 +60,11 @@ export default (state, action) => {
             ? { ...task, status: taskStatus }
             : task;
         }),
+      };
+    case DELETE_SINGLE_TASK:
+      return {
+        ...state,
+        tasks: state.tasks.filter((task) => task.id !== action.payload),
       };
     default:
       return {

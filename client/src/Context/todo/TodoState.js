@@ -9,6 +9,7 @@ import {
   CLEAR_FORM,
   ADD_NEW_TASK,
   TOGGLE_STATUS,
+  DELETE_SINGLE_TASK,
 } from "../types";
 
 const TodoState = (props) => {
@@ -58,6 +59,13 @@ const TodoState = (props) => {
       payload: id,
     });
   };
+  // Delete Single Task
+  const deleteSingleTask = (id) => {
+    dispatch({
+      type: DELETE_SINGLE_TASK,
+      payload: id,
+    });
+  };
 
   return (
     <TodoContext.Provider
@@ -70,6 +78,7 @@ const TodoState = (props) => {
         clearForm,
         addNewTask,
         toggleStatus,
+        deleteSingleTask,
       }}
     >
       {props.children}

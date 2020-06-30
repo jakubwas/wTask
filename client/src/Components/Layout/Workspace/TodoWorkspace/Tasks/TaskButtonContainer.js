@@ -1,5 +1,8 @@
-import React from "react";
+// Dependencies
+import React, { useContext } from "react";
 import styled from "styled-components";
+// Context API
+import TodoContext from "../../../../../Context/todo/todoContext";
 
 const Container = styled.button`
   width: 3rem;
@@ -22,7 +25,23 @@ const Container = styled.button`
 `;
 
 const TaskButtonContainer = (props) => {
-  return <Container opacity={props.opacity}>{props.children}</Container>;
+  const todoContext = useContext(TodoContext);
+  const { deleteSingleTask } = todoContext;
+
+  const onClickHandler = () => {
+    switch (props.onClickedHandlerData.actionType) {
+      case "delete":
+        deleteSingleTask(props.onClickedHandlerData.id);
+      case "update":
+        console.log("Update");
+    }
+  };
+
+  return (
+    <Container opacity={props.opacity} onClick={onClickHandler}>
+      {props.children}
+    </Container>
+  );
 };
 
 export default TaskButtonContainer;

@@ -37,8 +37,8 @@ const Task = ({ task }) => {
         status={task.status}
       />
       <TextContainer>{task.name}</TextContainer>
-      <EditButton opacity={taskBtnsOpacity} />
-      <TrashButton opacity={taskBtnsOpacity} />
+      <EditButton opacity={taskBtnsOpacity} id={task.id} />
+      <TrashButton opacity={taskBtnsOpacity} id={task.id} />
     </TaskContainer>
   );
 };
