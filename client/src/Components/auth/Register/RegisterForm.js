@@ -1,6 +1,8 @@
 // Dependencies
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
+// Context API
+import AuthContext from "../../../Context/auth/authContext";
 
 const FormContainer = styled.div`
   min-width: 40rem;
@@ -65,6 +67,10 @@ const LoginButton = styled.button`
 `;
 
 const RegisterForm = () => {
+  const authContext = useContext(AuthContext);
+
+  const { register } = authContext;
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -73,26 +79,64 @@ const RegisterForm = () => {
   });
 
   const { name, email, password, password2 } = user;
-
+  const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
+  const onSubmit = (e) => {
+    e.preventDefault();
+    register({
+      name,
+      email,
+      password,
+    });
+  };
   return (
     <FormContainer>
       <RegisterTitle>Register</RegisterTitle>
-      <Form>
+      <Form onSubmit={onSubmit}>
         <GroupContainer>
           <Label htmlFor="email">Name</Label>
-          <Input />
+          <Input
+            id="name"
+            type="text"
+            name="name"
+            value={name}
+            onChange={onChange}
+            required
+          />
         </GroupContainer>
         <GroupContainer>
           <Label htmlFor="email">Email Adress</Label>
-          <Input />
+          <Input
+            id="email"
+            type="email"
+            name="email"
+            value={email}
+            onChange={onChange}
+            required
+          />
         </GroupContainer>
         <GroupContainer>
           <Label htmlFor="password">Password</Label>
-          <Input />
+          <Input
+            id="password"
+            type="password"
+            name="password"
+            value={password}
+            onChange={onChange}
+            required
+            minLength="6"
+          />
         </GroupContainer>
         <GroupContainer>
           <Label htmlFor="password2">Confirm Password</Label>
-          <Input />
+          <Input
+            id="password2"
+            type="password"
+            name="password2"
+            value={password2}
+            onChange={onChange}
+            required
+            minLength="6"
+          />
         </GroupContainer>
         <SubmitButton>Submit</SubmitButton>
       </Form>

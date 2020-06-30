@@ -6,25 +6,28 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./Components/Layout/_MainComponents/Navbar";
 import TodoEditor from "./Components/Layout/_MainComponents/TodoEditor";
 import RegisterPage from "./Components/auth/RegisterPage";
+import HabitsEditor from "./Components/Layout/_MainComponents/HabitsEditor";
 // Context API
 import DisplayState from "./Context/display/DisplayState";
 import TodoState from "./Context/todo/TodoState";
-import HabitsEditor from "./Components/Layout/_MainComponents/HabitsEditor";
+import AuthState from "./Context/auth/AuthState";
 
 const App = () => {
   return (
     <Router>
       <Fragment>
-        <TodoState>
-          <DisplayState>
-            {/* <Navbar /> */}
-            <Switch>
-              <Route exact path="/register" component={RegisterPage} />
-              <Route exact path="/" component={TodoEditor} />
-              <Route exact path="/habits-control" component={HabitsEditor} />
-            </Switch>
-          </DisplayState>
-        </TodoState>
+        <AuthState>
+          <TodoState>
+            <DisplayState>
+              {/* <Navbar /> */}
+              <Switch>
+                <Route exact path="/register" component={RegisterPage} />
+                <Route exact path="/" component={TodoEditor} />
+                <Route exact path="/habits-control" component={HabitsEditor} />
+              </Switch>
+            </DisplayState>
+          </TodoState>
+        </AuthState>
       </Fragment>
     </Router>
   );
