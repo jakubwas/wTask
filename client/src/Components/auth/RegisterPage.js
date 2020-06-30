@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Navbar from "./Register/Navbar";
 import bgImage from "./Register/bgImage.png";
 import HomePageTtiles from "./Register/HomePageTitles";
+import RegisterForm from "./Register/RegisterForm";
 
 const Container = styled.div`
   background-image: url(${bgImage});
@@ -22,6 +23,7 @@ const Register = () => {
       <Navbar />
       <Container>
         <HomePageTtiles />
+        <RegisterForm />
       </Container>
     </Fragment>
   );

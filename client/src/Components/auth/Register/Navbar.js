@@ -20,16 +20,6 @@ const AppTitle = styled.div`
   padding-top: 1.5rem;
 `;
 
-const LoginButton = styled.button`
-  background: rgba(0, 0, 0, 0);
-  color: white;
-  margin-right: 25vh;
-  font-size: 1.5rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-`;
-
 const Navbar = () => {
   const [navProps, setNavProps] = useState({
     bg: "rgba(26, 38, 57, 0.02)",
@@ -55,7 +45,6 @@ const Navbar = () => {
   return (
     <Container bg={navProps.bg} padding={navProps.padding}>
       <AppTitle>WTask</AppTitle>
-      <LoginButton>Sign in</LoginButton>
     </Container>
   );
 };
