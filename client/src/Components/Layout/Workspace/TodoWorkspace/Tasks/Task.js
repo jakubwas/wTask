@@ -18,6 +18,7 @@ const TextContainer = styled.div`
   font-size: 1.4rem;
   margin: 1.2rem 2.5rem 1.2rem 0;
   line-height: 2rem;
+  text-decoration: ${(props) => props.tdecoration};
 `;
 
 const Task = ({ task }) => {
@@ -36,8 +37,16 @@ const Task = ({ task }) => {
         priority={task.priority}
         status={task.status}
       />
-      <TextContainer>{task.name}</TextContainer>
-      <EditButton opacity={taskBtnsOpacity} id={task.id} />
+      {task.status === "completed" ? (
+        <TextContainer tdecoration="line-through">{task.name}</TextContainer>
+      ) : (
+        <TextContainer>{task.name}</TextContainer>
+      )}
+
+      {task.status === "uncompleted" && (
+        <EditButton opacity={taskBtnsOpacity} id={task.id} />
+      )}
+
       <TrashButton opacity={taskBtnsOpacity} id={task.id} />
     </TaskContainer>
   );

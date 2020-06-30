@@ -1,9 +1,10 @@
 // Dependencies
-import React, { useContext } from "react";
+import React, { useContext, Fragment } from "react";
 import styled from "styled-components";
 // React Components
 import StatusSectionHeader from "./StatusSectionHeader";
 import Task from "./Task";
+import EmptyTaskListInfo from "./EmptyTaskListInfo";
 // Context API
 import TodoContext from "../../../../../Context/todo/todoContext";
 
@@ -17,11 +18,20 @@ const UncompletedTasks = () => {
   return (
     <Container>
       <StatusSectionHeader>Uncompleted Tasks</StatusSectionHeader>
-      {tasks.map((task) => {
-        if (task.status === "uncompleted") {
-          return <Task key={task.id} task={task} />;
-        }
-      })}
+      {tasks.length > 0 &&
+      tasks.find((task) => task.status === "uncompleted") ? (
+        <Fragment>
+          {tasks.map((task) => {
+            if (task.status === "uncompleted") {
+              return <Task key={task.id} task={task} />;
+            }
+          })}
+        </Fragment>
+      ) : (
+        <EmptyTaskListInfo>
+          Looks like everything's organized in the right place.
+        </EmptyTaskListInfo>
+      )}
     </Container>
   );
 };
