@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // React Components
 import Navbar from "./Components/Layout/_MainComponents/Navbar";
 import TodoEditor from "./Components/Layout/_MainComponents/TodoEditor";
-import Register from "./Components/auth/Register";
+import RegisterPage from "./Components/auth/RegisterPage";
 // Context API
 import DisplayState from "./Context/display/DisplayState";
 import TodoState from "./Context/todo/TodoState";
@@ -17,9 +17,9 @@ const App = () => {
       <Fragment>
         <TodoState>
           <DisplayState>
-            <Navbar />
+            {/* <Navbar /> */}
             <Switch>
-              <Route exact path="/register" component={Register} />
+              <Route exact path="/register" component={RegisterPage} />
               <Route exact path="/" component={TodoEditor} />
               <Route exact path="/habits-control" component={HabitsEditor} />
             </Switch>
