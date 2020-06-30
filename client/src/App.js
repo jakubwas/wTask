@@ -1,22 +1,32 @@
 // Dependencies
 import React, { Fragment } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 // React Components
 import Navbar from "./Components/Layout/_MainComponents/Navbar";
-import AppContent from "./Components/Layout/_MainComponents/AppContent";
+import TodoEditor from "./Components/Layout/_MainComponents/TodoEditor";
+import Register from "./Components/auth/Register";
 // Context API
 import DisplayState from "./Context/display/DisplayState";
 import TodoState from "./Context/todo/TodoState";
+import HabitsEditor from "./Components/Layout/_MainComponents/HabitsEditor";
 
 const App = () => {
   return (
-    <Fragment>
-      <TodoState>
-        <DisplayState>
-          <Navbar />
-          <AppContent />
-        </DisplayState>
-      </TodoState>
-    </Fragment>
+    <Router>
+      <Fragment>
+        <TodoState>
+          <DisplayState>
+            <Navbar />
+            <Switch>
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/" component={TodoEditor} />
+              <Route exact path="/habits-control" component={HabitsEditor} />
+            </Switch>
+          </DisplayState>
+        </TodoState>
+      </Fragment>
+    </Router>
   );
 };
 
