@@ -5,10 +5,17 @@ import {
   ADD_NEW_TASK,
   TOGGLE_STATUS,
   DELETE_SINGLE_TASK,
+  GET_TASKS,
 } from "../types";
 
 export default (state, action) => {
   switch (action.type) {
+    case GET_TASKS:
+      return {
+        ...state,
+        tasks: action.payload,
+        loading: false,
+      };
     case SET_PRIORITY:
       let updatedPriority;
       if (state.taskPriority === 1 && action.payload === 1) {
@@ -28,7 +35,6 @@ export default (state, action) => {
         currentInputValue: action.payload,
       };
     case ADD_NEW_TASK:
-      console.log(action.payload);
       return {
         ...state,
         tasks: [

@@ -7,8 +7,16 @@ const router = express.Router();
 // @route   GET api/task-list
 // @desc    Get user's taskList
 // @acces   Private
-router.get("/", (req, res) => {
-  res.send("Get user's task list");
+router.get("/", auth, async (req, res) => {
+  try {
+    const tasks = await Task.find({ user: req.user.id }).sort({
+      date: -1,
+    });
+    res.json(tasks);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
 });
 
 // @route   POST api/task-list

@@ -11,6 +11,7 @@ import {
   ADD_NEW_TASK,
   TOGGLE_STATUS,
   DELETE_SINGLE_TASK,
+  GET_TASKS,
 } from "../types";
 
 const TodoState = (props) => {
@@ -23,6 +24,18 @@ const TodoState = (props) => {
   const [state, dispatch] = useReducer(TodoReducer, initialState);
 
   // Methods
+  const getTasks = async () => {
+    try {
+      const res = await axios.get("/api/task-list");
+
+      dispatch({
+        type: GET_TASKS,
+        payload: res.data,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   // Set Form's Priority
   const setTaskPriority = (priorityValue) => {
@@ -94,6 +107,7 @@ const TodoState = (props) => {
         addNewTask,
         toggleStatus,
         deleteSingleTask,
+        getTasks,
       }}
     >
       {props.children}

@@ -16,13 +16,17 @@ import Navbar from "./Navbar";
 // Context API
 import DisplayContext from "../../../Context/display/displayContext";
 import AuthContext from "../../../Context/auth/authContext";
+import TodoContext from "../../../Context/todo/todoContext";
 
 const TodoEditor = () => {
   const displayContext = useContext(DisplayContext);
   const authContext = useContext(AuthContext);
+  const todoContext = useContext(TodoContext);
+  const { getTasks } = todoContext;
 
   useEffect(() => {
     authContext.loadUser();
+    getTasks();
   }, []);
 
   const { menuVisibility, settingsVisibility } = displayContext;
