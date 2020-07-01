@@ -4,7 +4,7 @@ import MenuButtonContainer from "./MenuButtonContainer";
 
 const HabitsControlButton = () => {
   return (
-    <MenuButtonContainer>
+    <MenuButtonContainer bbottom={"1px solid rgba(0, 0, 0, 0.2)"}>
       <svg
         viewBox="0 0 512 512"
         height="2rem"

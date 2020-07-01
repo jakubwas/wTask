@@ -1,5 +1,6 @@
 // Dependencies
 import React, { useState, useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 // Context API
 import AuthContext from "../../../Context/auth/authContext";
@@ -146,7 +147,9 @@ const RegisterForm = (props) => {
       </Form>
       <LoginContainer>
         <span>Do you have account ? Please sign in here</span>
-        <LoginButton>Log in</LoginButton>
+        <Link to="/login">
+          <LoginButton>Log in</LoginButton>
+        </Link>
       </LoginContainer>
     </FormContainer>
   );

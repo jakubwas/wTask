@@ -4,7 +4,11 @@ import MenuButtonContainer from "./MenuButtonContainer";
 
 const TodoListButton = () => {
   return (
-    <MenuButtonContainer tranY={"2px"}>
+    <MenuButtonContainer
+      tranY={"1px"}
+      btop={"1px solid rgba(0, 0, 0, 0.2)"}
+      bbottom={"1px solid rgba(0, 0, 0, 0.2)"}
+    >
       <svg
         viewBox="0 0 470.767 470.767"
         style={{ width: "2rem", height: "2rem", marginRight: "1.5rem" }}
