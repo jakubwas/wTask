@@ -1,6 +1,5 @@
 // Dependencies
 import React, { useReducer } from "react";
-import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import TodoReducer from "./todoReducer";
 import TodoContext from "./todoContext";

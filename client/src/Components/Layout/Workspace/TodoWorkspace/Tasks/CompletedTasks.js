@@ -23,7 +23,7 @@ const UncompletedTasks = () => {
         <Fragment>
           {tasks.map((task) => {
             if (task.status === "completed") {
-              return <Task key={task.id} task={task} />;
+              return <Task key={task._id} task={task} />;
             }
           })}
         </Fragment>

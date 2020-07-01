@@ -33,7 +33,7 @@ const Task = ({ task }) => {
       }}
     >
       <CheckBoxButton
-        id={task.id}
+        id={task._id}
         priority={task.priority}
         status={task.status}
       />
@@ -44,10 +44,10 @@ const Task = ({ task }) => {
       )}
 
       {task.status === "uncompleted" && (
-        <EditButton opacity={taskBtnsOpacity} id={task.id} />
+        <EditButton opacity={taskBtnsOpacity} id={task._id} />
       )}
 
-      <TrashButton opacity={taskBtnsOpacity} id={task.id} />
+      <TrashButton opacity={taskBtnsOpacity} id={task._id} />
     </TaskContainer>
   );
 };

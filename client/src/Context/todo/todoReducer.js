@@ -39,7 +39,7 @@ export default (state, action) => {
         ...state,
         tasks: [
           {
-            id: action.payload._id,
+            _id: action.payload._id,
             status: action.payload.status,
             priority: action.payload.priority,
             name: action.payload.name,
@@ -63,7 +63,7 @@ export default (state, action) => {
           } else {
             taskStatus = "completed";
           }
-          return task.id === action.payload
+          return task._id === action.payload
             ? { ...task, status: taskStatus }
             : task;
         }),
@@ -71,7 +71,7 @@ export default (state, action) => {
     case DELETE_SINGLE_TASK:
       return {
         ...state,
-        tasks: state.tasks.filter((task) => task.id !== action.payload),
+        tasks: state.tasks.filter((task) => task._id !== action.payload),
       };
     default:
       return {
