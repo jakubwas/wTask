@@ -3,18 +3,22 @@ import SettingsButtonContainer from "./SettingsButtonContainer";
 // Context API
 import AuthContext from "../../../Context/auth/authContext";
 import TodoContext from "../../../Context/todo/todoContext";
+import DisplayContext from "../../../Context/display/displayContext";
 
 const LogoutButton = () => {
   const authContext = useContext(AuthContext);
   const todoContext = useContext(TodoContext);
+  const displayContext = useContext(DisplayContext);
 
   const onClickHandlerFunctions = () => {
     logout();
     clearTodos();
+    toggleSettingsVisibility();
   };
 
   const { logout } = authContext;
   const { clearTodos } = todoContext;
+  const { toggleSettingsVisibility } = displayContext;
 
   return (
     <SettingsButtonContainer onClickHandler={onClickHandlerFunctions}>
