@@ -6,14 +6,19 @@ import styled from "styled-components";
 import AuthContext from "../../../Context/auth/authContext";
 
 const FormContainer = styled.div`
-  min-width: 40rem;
-  margin-right: 8rem;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 520px) {
+    width: 100%;
+  }
 `;
 const RegisterTitle = styled.h1`
   font-size: 3rem;
   color: white;
+  @media screen and (max-width: 520px) {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
 `;
 const GroupContainer = styled.div`
   margin: 1.2rem 0;
@@ -143,12 +148,12 @@ const RegisterForm = (props) => {
             minLength="6"
           />
         </GroupContainer>
-        <SubmitButton>Submit</SubmitButton>
+        <SubmitButton>Sign up</SubmitButton>
       </Form>
       <LoginContainer>
         <span>Do you have account ? Please sign in here</span>
         <Link to="/login">
-          <LoginButton>Log in</LoginButton>
+          <LoginButton>Sign in</LoginButton>
         </Link>
       </LoginContainer>
     </FormContainer>

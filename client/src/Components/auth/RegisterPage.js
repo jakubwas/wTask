@@ -7,12 +7,19 @@ import bgImage from "./Register/bgImage.png";
 import HomePageTtiles from "./Register/HomePageTitles";
 import RegisterForm from "./Register/RegisterForm";
 
-const Container = styled.div`
+const LandingPageBgContainer = styled.div`
   background-image: url(${bgImage});
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
+  margin-bottom: 100vh;
+`;
+const LandingPageContentContainer = styled.div`
+  width: 93%;
+  margin: auto;
+  min-height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 `;
@@ -21,10 +28,12 @@ const Register = (props) => {
   return (
     <Fragment>
       <Navbar />
-      <Container>
-        <HomePageTtiles />
-        <RegisterForm history={props.history} />
-      </Container>
+      <LandingPageBgContainer>
+        <LandingPageContentContainer>
+          <HomePageTtiles />
+          <RegisterForm history={props.history} />
+        </LandingPageContentContainer>
+      </LandingPageBgContainer>
     </Fragment>
   );
 };

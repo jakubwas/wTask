@@ -1,25 +1,27 @@
 // Dependencies
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-//
-
-const Container = styled.nav`
+// Styled components
+const NavigationBgContainer = styled.nav`
   width: 100vw;
   min-height: 4.3rem;
-  display: flex;
-  justify-content: space-between;
   background: ${(props) => props.bg};
   opacity: ${(props) => props.opacity};
   padding-bottom: ${(props) => props.padding};
   position: fixed;
 `;
+const NavigationContentContainer = styled.div`
+  width: 93%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+`;
 const AppTitle = styled.div`
   font-size: 2.5rem;
   color: white;
-  margin-left: 15vh;
   padding-top: 1.5rem;
 `;
-
+// React Component
 const Navbar = () => {
   const [navProps, setNavProps] = useState({
     bg: "rgba(26, 38, 57, 0.02)",
@@ -43,9 +45,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <Container bg={navProps.bg} padding={navProps.padding}>
-      <AppTitle>WTask</AppTitle>
-    </Container>
+    <NavigationBgContainer bg={navProps.bg} padding={navProps.padding}>
+      <NavigationContentContainer>
+        <AppTitle>WTask</AppTitle>
+      </NavigationContentContainer>
+    </NavigationBgContainer>
   );
 };
 
