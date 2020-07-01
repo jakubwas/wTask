@@ -1,7 +1,6 @@
 // Dependencies
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
 // React Components
 import Navbar from "./Components/Layout/_MainComponents/Navbar";
 import TodoEditor from "./Components/Layout/_MainComponents/TodoEditor";
@@ -26,7 +25,6 @@ const App = () => {
         <AuthState>
           <TodoState>
             <DisplayState>
-              {/* <Navbar /> */}
               <Switch>
                 <Route exact path="/register" component={RegisterPage} />
                 <Route exact path="/login" component={LoginPage} />

@@ -9,10 +9,10 @@ const Container = styled.div`
   height: 100vh;
 `;
 
-const LoginPage = () => {
+const LoginPage = (props) => {
   return (
     <Container>
-      <SignInForm />
+      <SignInForm history={props.history} />
     </Container>
   );
 };

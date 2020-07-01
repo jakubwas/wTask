@@ -1,5 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import styled from "styled-components";
+// Context API
+import AuthContext from "../../../Context/auth/authContext";
 
 const FormContainer = styled.div`
   position: absolute;
@@ -47,7 +49,17 @@ const LogInButton = styled.button`
   cursor: pointer;
 `;
 
-const SignInForm = () => {
+const SignInForm = (props) => {
+  const authContext = useContext(AuthContext);
+
+  const { login, isAuthenticated } = authContext;
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      props.history.push("/");
+    }
+  }, [isAuthenticated]);
+
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -59,34 +71,37 @@ const SignInForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    login({ email, password });
   };
 
   return (
     <FormContainer>
       <SignInTitle>Sign In</SignInTitle>
-      <GroupContainer>
-        <Label htmlFor="email">Email Adress</Label>
-        <Input
-          id="email"
-          type="email"
-          name="email"
-          value={email}
-          onChange={onChange}
-          required
-        />
-      </GroupContainer>
-      <GroupContainer>
-        <Label htmlFor="password">Password</Label>
-        <Input
-          id="password"
-          type="password"
-          name="password"
-          value={password}
-          onChange={onChange}
-          required
-        />
-      </GroupContainer>
-      <LogInButton>Login</LogInButton>
+      <Form onSubmit={onSubmit}>
+        <GroupContainer>
+          <Label htmlFor="email">Email Adress</Label>
+          <Input
+            id="email"
+            type="email"
+            name="email"
+            value={email}
+            onChange={onChange}
+            required
+          />
+        </GroupContainer>
+        <GroupContainer>
+          <Label htmlFor="password">Password</Label>
+          <Input
+            id="password"
+            type="password"
+            name="password"
+            value={password}
+            onChange={onChange}
+            required
+          />
+        </GroupContainer>
+        <LogInButton type="submit">Login</LogInButton>
+      </Form>
     </FormContainer>
   );
 };

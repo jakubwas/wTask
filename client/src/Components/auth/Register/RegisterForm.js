@@ -91,8 +91,6 @@ const RegisterForm = (props) => {
       email,
       password,
     });
-
-    props.history.push("/");
   };
   return (
     <FormContainer>

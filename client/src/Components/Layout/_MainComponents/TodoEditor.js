@@ -1,5 +1,5 @@
 // Dependencies
-import React, { useContext, useEffect } from "react";
+import React, { Fragment, useContext, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 // React Components
 import AppContainer from "../../Containers/AppContainer";
@@ -12,6 +12,7 @@ import TodoForm from "../Workspace/TodoWorkspace/Form/TodoForm";
 import UncompletedTasks from "../Workspace/TodoWorkspace/Tasks/UncompletedTasks";
 import CompletedTasks from "../Workspace/TodoWorkspace/Tasks/CompletedTasks";
 import SectionSeparator from "../Workspace/TodoWorkspace/SectionSeparator";
+import Navbar from "./Navbar";
 // Context API
 import DisplayContext from "../../../Context/display/displayContext";
 import AuthContext from "../../../Context/auth/authContext";
@@ -27,22 +28,25 @@ const TodoEditor = () => {
   const { menuVisibility, settingsVisibility } = displayContext;
 
   return (
-    <AppContainer>
-      <Menu />
-      {settingsVisibility && <SettingsDropDown />}
-      <CSSTransition in={menuVisibility} timeout={350} classNames="content">
-        <EditorContainer>
-          <WorkspaceContainer>
-            <TodoWorkspaceHeader />
-            <TodoForm />
-            <SectionSeparator />
-            <UncompletedTasks />
-            <SectionSeparator />
-            <CompletedTasks />
-          </WorkspaceContainer>
-        </EditorContainer>
-      </CSSTransition>
-    </AppContainer>
+    <Fragment>
+      <Navbar />
+      <AppContainer>
+        <Menu />
+        {settingsVisibility && <SettingsDropDown />}
+        <CSSTransition in={menuVisibility} timeout={350} classNames="content">
+          <EditorContainer>
+            <WorkspaceContainer>
+              <TodoWorkspaceHeader />
+              <TodoForm />
+              <SectionSeparator />
+              <UncompletedTasks />
+              <SectionSeparator />
+              <CompletedTasks />
+            </WorkspaceContainer>
+          </EditorContainer>
+        </CSSTransition>
+      </AppContainer>
+    </Fragment>
   );
 };
 
