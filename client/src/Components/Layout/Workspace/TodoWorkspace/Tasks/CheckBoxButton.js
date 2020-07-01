@@ -34,7 +34,7 @@ const CheckBoxButton = ({ id, priority, status }) => {
 
   useEffect(() => {
     switch (priority) {
-      case 0:
+      case "0":
         if (status === "uncompleted") {
           setColorPalette({
             border: "1px solid rgb(128,128,128)",
@@ -50,7 +50,7 @@ const CheckBoxButton = ({ id, priority, status }) => {
           });
         }
         break;
-      case 1:
+      case "1":
         if (status === "uncompleted") {
           setColorPalette({
             border: "2px solid rgba(0, 0, 255, 0.8)",
@@ -66,7 +66,7 @@ const CheckBoxButton = ({ id, priority, status }) => {
           });
         }
         break;
-      case 2:
+      case "2":
         if (status === "uncompleted") {
           setColorPalette({
             border: "2px solid rgba(219, 147, 64, 0.8)",
@@ -82,7 +82,7 @@ const CheckBoxButton = ({ id, priority, status }) => {
           });
         }
         break;
-      case 3:
+      case "3":
         if (status === "uncompleted") {
           setColorPalette({
             border: "2px solid rgba(255, 0, 0, 0.8)",
@@ -98,8 +98,8 @@ const CheckBoxButton = ({ id, priority, status }) => {
           });
         }
         break;
-
       default:
+        console.log(priority);
         break;
     }
   }, []);
@@ -118,7 +118,6 @@ const CheckBoxButton = ({ id, priority, status }) => {
             setSvgDisplay("none");
           }}
           onClick={() => {
-            console.log("aaaa");
             toggleStatus(id);
           }}
         >

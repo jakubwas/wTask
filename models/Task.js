@@ -12,6 +12,9 @@ const TaskSchema = mongoose.Schema({
   priority: {
     type: String,
   },
+  status: {
+    type: String,
+  },
   date: {
     type: Date,
     default: Date.now,

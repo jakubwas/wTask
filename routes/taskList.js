@@ -1,4 +1,7 @@
 const express = require("express");
+const auth = require("../middleware/auth");
+const Task = require("../models/Task");
+
 const router = express.Router();
 
 // @route   GET api/task-list
@@ -11,8 +14,24 @@ router.get("/", (req, res) => {
 // @route   POST api/task-list
 // @desc    Add new task
 // @acces   Private
-router.post("/", (req, res) => {
-  res.send("Add new task");
+router.post("/", [auth], async (req, res) => {
+  const { name, priority, status } = req.body;
+
+  try {
+    const newTask = new Task({
+      name,
+      priority,
+      status,
+      user: req.user.id,
+    });
+
+    const task = await newTask.save();
+
+    res.json(task);
+  } catch (err) {
+    console.error(er.message);
+    res.status(500).send("Server Error");
+  }
 });
 
 // @route   PUT api/task-list/:id

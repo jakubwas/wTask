@@ -1,6 +1,7 @@
 // Dependencies
 import React, { useReducer } from "react";
 import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
 import TodoReducer from "./todoReducer";
 import TodoContext from "./todoContext";
 import {
@@ -44,13 +45,27 @@ const TodoState = (props) => {
     });
   };
   // Add new Task
-  const addNewTask = () => {
-    console.log(state.tasks);
-    let id = uuidv4();
-    dispatch({
-      type: ADD_NEW_TASK,
-      payload: id,
-    });
+  const addNewTask = async () => {
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    let task = {
+      name: state.currentInputValue,
+      priority: state.taskPriority,
+      status: "uncompleted",
+    };
+    try {
+      const res = await axios.post("/api/task-list", task, config);
+
+      dispatch({
+        type: ADD_NEW_TASK,
+        payload: res.data,
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
   // Toggle status
   const toggleStatus = (id) => {

@@ -28,14 +28,15 @@ export default (state, action) => {
         currentInputValue: action.payload,
       };
     case ADD_NEW_TASK:
+      console.log(action.payload);
       return {
         ...state,
         tasks: [
           {
-            id: action.payload,
-            name: state.currentInputValue,
-            priority: state.taskPriority,
-            status: "uncompleted",
+            id: action.payload._id,
+            status: action.payload.status,
+            priority: action.payload.priority,
+            name: action.payload.name,
           },
           ...state.tasks,
         ],
