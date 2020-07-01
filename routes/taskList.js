@@ -45,8 +45,38 @@ router.post("/", [auth], async (req, res) => {
 // @route   PUT api/task-list/:id
 // @desc    Update task
 // @acces   Private
-router.put("/:id", (req, res) => {
-  res.send("Update task");
+router.put("/:id", auth, async (req, res) => {
+  const { status } = req.body;
+
+  try {
+    let task = await Task.findById(req.params.id);
+
+    if (!task) return res.status(404).json({ msg: "Task not found" });
+
+    // Make sure user owns contact
+    if (task.user.toString() !== req.user.id) {
+      return res.status(401).json({ msg: "Not authorized" });
+    }
+
+    if (status === "completed") {
+      task = await Task.findByIdAndUpdate(
+        req.params.id,
+        { status: "uncompleted" },
+        { new: true }
+      );
+    } else if (status === "uncompleted") {
+      task = await Task.findByIdAndUpdate(
+        req.params.id,
+        { status: "completed" },
+        { new: true }
+      );
+    }
+
+    res.json(task);
+  } catch (err) {
+    console.error(er.message);
+    res.status(500).send("Server Error");
+  }
 });
 
 // @route   DELETE api/task-list/:id

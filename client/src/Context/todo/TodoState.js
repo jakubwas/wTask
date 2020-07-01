@@ -81,11 +81,23 @@ const TodoState = (props) => {
     }
   };
   // Toggle status
-  const toggleStatus = (id) => {
-    dispatch({
-      type: TOGGLE_STATUS,
-      payload: id,
-    });
+  const toggleStatus = async (task) => {
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    try {
+      const res = await axios.put(`/api/task-list/${task._id}`, task, config);
+
+      dispatch({
+        type: TOGGLE_STATUS,
+        payload: res.data,
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   // Delete Single Task

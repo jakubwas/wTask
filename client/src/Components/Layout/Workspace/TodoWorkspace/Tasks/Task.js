@@ -33,7 +33,7 @@ const Task = ({ task }) => {
       }}
     >
       <CheckBoxButton
-        id={task._id}
+        task={task}
         priority={task.priority}
         status={task.status}
       />

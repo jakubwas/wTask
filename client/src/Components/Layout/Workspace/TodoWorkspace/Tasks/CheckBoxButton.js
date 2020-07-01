@@ -25,7 +25,7 @@ const Svg = styled.svg`
   height: 0.9rem;
 `;
 
-const CheckBoxButton = ({ id, priority, status }) => {
+const CheckBoxButton = ({ task, priority, status }) => {
   const todoContext = useContext(TodoContext);
   const { toggleStatus } = todoContext;
 
@@ -118,7 +118,7 @@ const CheckBoxButton = ({ id, priority, status }) => {
             setSvgDisplay("none");
           }}
           onClick={() => {
-            toggleStatus(id);
+            toggleStatus(task);
           }}
         >
           <Svg
@@ -141,7 +141,7 @@ const CheckBoxButton = ({ id, priority, status }) => {
           bgColor={colorPallete.bgColor}
           bgHover={colorPallete.bgHover}
           onClick={() => {
-            toggleStatus(id);
+            toggleStatus(task);
           }}
         >
           <Svg
