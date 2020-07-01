@@ -11,6 +11,8 @@ import HabitsEditor from "./Components/Layout/_MainComponents/HabitsEditor";
 import DisplayState from "./Context/display/DisplayState";
 import TodoState from "./Context/todo/TodoState";
 import AuthState from "./Context/auth/AuthState";
+// Private Route
+import PrivateRoute from "./Components/routing/PrivateRoute";
 // Token
 import setAuthToken from "./utils/setAuthToken";
 
@@ -28,7 +30,7 @@ const App = () => {
               <Switch>
                 <Route exact path="/register" component={RegisterPage} />
                 <Route exact path="/login" component={LoginPage} />
-                <Route exact path="/" component={TodoEditor} />
+                <PrivateRoute exact path="/" component={TodoEditor} />
                 <Route exact path="/habits-control" component={HabitsEditor} />
               </Switch>
             </DisplayState>

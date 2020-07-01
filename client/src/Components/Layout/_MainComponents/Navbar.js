@@ -6,7 +6,6 @@ import BurgerMenu from "../Navbar/BurgerMenu";
 import RightSideNavIcon from "../Navbar/RightSideNavIcons";
 import Settings from "../Navbar/SettingsButton";
 import InfoButton from "../Navbar/InfoButton";
-
 // Styled Components
 const NavigationBar = styled.div`
   height: 4.3rem;

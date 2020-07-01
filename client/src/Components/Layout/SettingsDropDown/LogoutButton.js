@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import SettingsButtonContainer from "./SettingsButtonContainer";
+// Context API
+import AuthContext from "../../../Context/auth/authContext";
 
 const LogoutButton = () => {
+  const authContext = useContext(AuthContext);
+
+  const { logout } = authContext;
+
   return (
-    <SettingsButtonContainer>
+    <SettingsButtonContainer onClickHandler={logout}>
       <svg
         viewBox="0 0 128 128"
         width="21px"

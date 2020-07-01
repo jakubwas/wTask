@@ -17,7 +17,15 @@ const Container = styled.div`
 `;
 
 const SettingsButtonContainer = (props) => {
-  return <Container>{props.children}</Container>;
+  return (
+    <Container
+      onClick={() => {
+        props.onClickHandler();
+      }}
+    >
+      {props.children}
+    </Container>
+  );
 };
 
 export default SettingsButtonContainer;
