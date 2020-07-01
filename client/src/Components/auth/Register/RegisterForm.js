@@ -1,5 +1,5 @@
 // Dependencies
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import styled from "styled-components";
 // Context API
 import AuthContext from "../../../Context/auth/authContext";
@@ -66,11 +66,15 @@ const LoginButton = styled.button`
   outline: none;
 `;
 
-const RegisterForm = () => {
+const RegisterForm = (props) => {
   const authContext = useContext(AuthContext);
 
-  const { register } = authContext;
-
+  const { register, isAuthenticated } = authContext;
+  useEffect(() => {
+    if (isAuthenticated) {
+      props.history.push("/");
+    }
+  }, [isAuthenticated]);
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -87,6 +91,8 @@ const RegisterForm = () => {
       email,
       password,
     });
+
+    props.history.push("/");
   };
   return (
     <FormContainer>

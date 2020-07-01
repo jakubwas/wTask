@@ -17,13 +17,13 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const Register = () => {
+const Register = (props) => {
   return (
     <Fragment>
       <Navbar />
       <Container>
         <HomePageTtiles />
-        <RegisterForm />
+        <RegisterForm history={props.history} />
       </Container>
     </Fragment>
   );

@@ -1,5 +1,5 @@
 // Dependencies
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 // React Components
 import AppContainer from "../../Containers/AppContainer";
@@ -14,9 +14,15 @@ import CompletedTasks from "../Workspace/TodoWorkspace/Tasks/CompletedTasks";
 import SectionSeparator from "../Workspace/TodoWorkspace/SectionSeparator";
 // Context API
 import DisplayContext from "../../../Context/display/displayContext";
+import AuthContext from "../../../Context/auth/authContext";
 
 const TodoEditor = () => {
   const displayContext = useContext(DisplayContext);
+  const authContext = useContext(AuthContext);
+
+  useEffect(() => {
+    authContext.loadUser();
+  }, []);
 
   const { menuVisibility, settingsVisibility } = displayContext;
 
