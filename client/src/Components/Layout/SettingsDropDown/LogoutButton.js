@@ -2,14 +2,22 @@ import React, { useContext } from "react";
 import SettingsButtonContainer from "./SettingsButtonContainer";
 // Context API
 import AuthContext from "../../../Context/auth/authContext";
+import TodoContext from "../../../Context/todo/todoContext";
 
 const LogoutButton = () => {
   const authContext = useContext(AuthContext);
+  const todoContext = useContext(TodoContext);
+
+  const onClickHandlerFunctions = () => {
+    logout();
+    clearTodos();
+  };
 
   const { logout } = authContext;
+  const { clearTodos } = todoContext;
 
   return (
-    <SettingsButtonContainer onClickHandler={logout}>
+    <SettingsButtonContainer onClickHandler={onClickHandlerFunctions}>
       <svg
         viewBox="0 0 128 128"
         width="21px"

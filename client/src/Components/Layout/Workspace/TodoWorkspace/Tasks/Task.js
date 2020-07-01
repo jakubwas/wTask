@@ -44,10 +44,10 @@ const Task = ({ task }) => {
       )}
 
       {task.status === "uncompleted" && (
-        <EditButton opacity={taskBtnsOpacity} id={task._id} />
+        <EditButton opacity={taskBtnsOpacity} _id={task._id} />
       )}
 
-      <TrashButton opacity={taskBtnsOpacity} id={task._id} />
+      <TrashButton opacity={taskBtnsOpacity} _id={task._id} />
     </TaskContainer>
   );
 };

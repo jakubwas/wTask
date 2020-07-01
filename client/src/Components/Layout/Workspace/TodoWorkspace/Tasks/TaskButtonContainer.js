@@ -31,9 +31,13 @@ const TaskButtonContainer = (props) => {
   const onClickHandler = () => {
     switch (props.onClickedHandlerData.actionType) {
       case "delete":
-        deleteSingleTask(props.onClickedHandlerData.id);
+        deleteSingleTask(props.onClickedHandlerData._id);
+        break;
       case "update":
         console.log("Update");
+        break;
+      default:
+        break;
     }
   };
 

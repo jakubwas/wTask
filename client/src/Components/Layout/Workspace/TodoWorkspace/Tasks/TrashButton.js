@@ -3,12 +3,12 @@ import React from "react";
 // React Components
 import TaskButtonContainer from "./TaskButtonContainer";
 
-const TrashButton = ({ opacity, id }) => {
+const TrashButton = ({ opacity, _id }) => {
   return (
     <TaskButtonContainer
       opacity={opacity}
       onClickedHandlerData={{
-        id: id,
+        _id: _id,
         actionType: "delete",
       }}
     >

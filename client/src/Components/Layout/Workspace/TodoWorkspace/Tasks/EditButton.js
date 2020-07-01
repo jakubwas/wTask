@@ -4,12 +4,12 @@ import styled from "styled-components";
 // React Components
 import TaskButtonContainer from "./TaskButtonContainer";
 
-const EditButton = ({ opacity, id }) => {
+const EditButton = ({ opacity, _id }) => {
   return (
     <TaskButtonContainer
       opacity={opacity}
       onClickedHandlerData={{
-        id: id,
+        _id: _id,
         actionType: "update",
       }}
     >

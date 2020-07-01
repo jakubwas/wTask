@@ -11,6 +11,7 @@ import {
   TOGGLE_STATUS,
   DELETE_SINGLE_TASK,
   GET_TASKS,
+  CLEAR_TODOS_AFTER_LOGOUT,
 } from "../types";
 
 const TodoState = (props) => {
@@ -86,11 +87,25 @@ const TodoState = (props) => {
       payload: id,
     });
   };
+
   // Delete Single Task
-  const deleteSingleTask = (id) => {
+  const deleteSingleTask = async (id) => {
+    try {
+      await axios.delete(`/api/task-list/${id}`);
+      dispatch({
+        type: DELETE_SINGLE_TASK,
+        payload: id,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  // Clear Todos
+
+  const clearTodos = () => {
     dispatch({
-      type: DELETE_SINGLE_TASK,
-      payload: id,
+      type: CLEAR_TODOS_AFTER_LOGOUT,
     });
   };
 
@@ -107,6 +122,7 @@ const TodoState = (props) => {
         toggleStatus,
         deleteSingleTask,
         getTasks,
+        clearTodos,
       }}
     >
       {props.children}

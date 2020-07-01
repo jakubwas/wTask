@@ -52,8 +52,24 @@ router.put("/:id", (req, res) => {
 // @route   DELETE api/task-list/:id
 // @desc    Delete task
 // @acces   Private
-router.post("/:id", (req, res) => {
-  res.send("Delete task");
+router.delete("/:id", auth, async (req, res) => {
+  try {
+    let task = await Task.findById(req.params.id);
+
+    if (!task) return res.status(404).json({ msg: "Contact not found" });
+
+    // Make sure user owns contact
+    if (task.user.toString() !== req.user.id) {
+      return res.status(401).json({ msg: "Not authorized" });
+    }
+
+    await Task.findByIdAndRemove(req.params.id);
+
+    res.json({ msg: "Task removed" });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
 });
 
 module.exports = router;

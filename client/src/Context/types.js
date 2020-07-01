@@ -19,3 +19,4 @@ export const LOGOUT = "LOGOUT";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
 //
 export const GET_TASKS = "GET_TASKS";
+export const CLEAR_TODOS_AFTER_LOGOUT = "CLEAR_TODOS_AFTER_LOGOUT";

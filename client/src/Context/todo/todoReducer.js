@@ -6,6 +6,7 @@ import {
   TOGGLE_STATUS,
   DELETE_SINGLE_TASK,
   GET_TASKS,
+  CLEAR_TODOS_AFTER_LOGOUT,
 } from "../types";
 
 export default (state, action) => {
@@ -73,6 +74,13 @@ export default (state, action) => {
         ...state,
         tasks: state.tasks.filter((task) => task._id !== action.payload),
       };
+    case CLEAR_TODOS_AFTER_LOGOUT:
+      return {
+        ...state,
+        tasks: [],
+        error: null,
+      };
+
     default:
       return {
         ...state,
