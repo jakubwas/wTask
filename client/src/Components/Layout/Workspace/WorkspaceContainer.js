@@ -1,7 +1,7 @@
 // Dependencies
 import React from "react";
 import styled from "styled-components";
-
+// Styled-Components
 const Container = styled.div`
   width: 80%;
   max-width: 90rem;
@@ -11,7 +11,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
+// React Component
 const WorkspaceContainer = (props) => {
   return <Container>{props.children}</Container>;
 };

@@ -17,19 +17,21 @@ import Navbar from "./Navbar";
 import DisplayContext from "../../../Context/display/displayContext";
 import AuthContext from "../../../Context/auth/authContext";
 import TodoContext from "../../../Context/todo/todoContext";
-
+// React Component
 const TodoEditor = () => {
   const displayContext = useContext(DisplayContext);
-  const authContext = useContext(AuthContext);
+  const { menuVisibility, settingsVisibility } = displayContext;
+
   const todoContext = useContext(TodoContext);
   const { getTasks } = todoContext;
 
+  const authContext = useContext(AuthContext);
+  const { loadUser } = authContext;
+
   useEffect(() => {
-    authContext.loadUser();
+    loadUser();
     getTasks();
   }, []);
-
-  const { menuVisibility, settingsVisibility } = displayContext;
 
   return (
     <Fragment>

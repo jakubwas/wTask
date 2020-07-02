@@ -1,5 +1,6 @@
+// Dependencies
 import axios from "axios";
-
+// React Component
 const setAuthToken = (token) => {
   if (token) {
     axios.defaults.headers.common["x-auth-token"] = token;

@@ -1,8 +1,10 @@
 // Dependencies
 import React, { useReducer } from "react";
 import axios from "axios";
+// Context API
 import TodoReducer from "./todoReducer";
 import TodoContext from "./todoContext";
+// Types
 import {
   SET_PRIORITY,
   GET_CURRENT_INPUT_VALUE,
@@ -13,7 +15,7 @@ import {
   GET_TASKS,
   CLEAR_TODOS_AFTER_LOGOUT,
 } from "../types";
-
+// React Component
 const TodoState = (props) => {
   const initialState = {
     taskPriority: 0,
@@ -22,8 +24,7 @@ const TodoState = (props) => {
   };
 
   const [state, dispatch] = useReducer(TodoReducer, initialState);
-
-  // Methods
+  // Get Task List
   const getTasks = async () => {
     try {
       const res = await axios.get("/api/task-list");
@@ -36,7 +37,6 @@ const TodoState = (props) => {
       console.log(err);
     }
   };
-
   // Set Form's Priority
   const setTaskPriority = (priorityValue) => {
     dispatch({
@@ -99,7 +99,6 @@ const TodoState = (props) => {
       console.log(err);
     }
   };
-
   // Delete Single Task
   const deleteSingleTask = async (id) => {
     try {
@@ -112,9 +111,7 @@ const TodoState = (props) => {
       console.log(err);
     }
   };
-
-  // Clear Todos
-
+  // Clear Todos (when user log out)
   const clearTodos = () => {
     dispatch({
       type: CLEAR_TODOS_AFTER_LOGOUT,

@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 import NavbarButton from "./NavbarButton";
 // Context API
 import DisplayContext from "../../../Context/display/displayContext";
-
+// React Component
 const SettingsButton = () => {
   const displayContext = useContext(DisplayContext);
   const { toggleSettingsVisibility } = displayContext;
@@ -12,12 +12,7 @@ const SettingsButton = () => {
   return (
     <div>
       <NavbarButton onClickHandler={toggleSettingsVisibility}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 128 128"
-          width="21px"
-          height="21px"
-        >
+        <svg viewBox="0 0 128 128" width="21px" height="21px">
           <path
             fill="#cadbea"
             d="M106.9,55.3c-0.8-2.8-1.8-5.4-3.2-7.9l8.8-8.8L99.8,26l-8.8,8.8c-4.9-2.8-10.5-4.3-16.3-4.4l-3.2-12l-17.3,4.6l3.2,12c-5,2.9-9.1,7.1-11.9,11.9l-12-3.2L29,61.1l12,3.2c0,2.8,0.4,5.6,1.1,8.4c0.8,2.8,1.8,5.4,3.2,7.9l-8.8,8.8L49.2,102l8.8-8.8c4.9,2.8,10.5,4.3,16.3,4.4l3.2,12l17.3-4.6l-3.2-12c5-2.9,9.1-7.1,11.9-11.9l12,3.2l4.6-17.3l-12-3.2C108.1,60.9,107.7,58.1,106.9,55.3z M78.6,79.1c-8.4,2.2-16.9-2.7-19.2-11.1s2.7-16.9,11.1-19.2c8.4-2.2,16.9,2.7,19.2,11.1C91.9,68.3,86.9,76.9,78.6,79.1z"

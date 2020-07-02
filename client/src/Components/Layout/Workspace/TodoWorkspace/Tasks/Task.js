@@ -5,14 +5,13 @@ import styled from "styled-components";
 import CheckBoxButton from "./CheckBoxButton";
 import EditButton from "./EditButton";
 import TrashButton from "./TrashButton";
-
+// Styled-Components
 const TaskContainer = styled.div`
   width: 100%;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
   display: flex;
 `;
-
 const TextContainer = styled.div`
   width: 100%;
   font-size: 1.4rem;
@@ -20,7 +19,7 @@ const TextContainer = styled.div`
   line-height: 2rem;
   text-decoration: ${(props) => props.tdecoration};
 `;
-
+// React Component
 const Task = ({ task }) => {
   const [taskBtnsOpacity, setTaskBtnsOpacity] = useState(0);
   return (

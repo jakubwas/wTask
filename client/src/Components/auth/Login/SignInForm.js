@@ -11,8 +11,8 @@ const FormContainer = styled.div`
   flex-direction: column;
   padding: 8rem 2.5rem 12rem 2.5rem;
   margin: 3rem;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  border-radius: 1.1rem;
   background: rgba(255, 255, 255, 1);
 `;
 const SignInTitle = styled.h1`
@@ -27,8 +27,8 @@ const GroupContainer = styled.div`
 const Input = styled.input`
   width: 100%;
   font-size: 2rem;
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  border: 0.3rem solid rgba(0, 0, 0, 0.3);
   outline: none;
   padding: 0.5rem;
   margin-top: 0.3rem;
@@ -43,8 +43,8 @@ const Label = styled.label`
 const LogInButton = styled.button`
   width: 70%;
   font-size: 2rem;
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
   color: rgba(255, 255, 255, 0.92);
   font-weight: 600;
   background: rgba(26, 38, 57, 1);
@@ -62,7 +62,7 @@ const linkStyle = {
   color: "rgba(255, 0, 0, 0.8)",
   marginLeft: "0.4rem",
 };
-
+// React Component
 const SignInForm = (props) => {
   const authContext = useContext(AuthContext);
 

@@ -8,7 +8,9 @@ export const CLEAR_FORM = "CLEAR_FORM";
 export const ADD_NEW_TASK = "ADD_NEW_TASK";
 export const TOGGLE_STATUS = "TOGGLE_STATUS";
 export const DELETE_SINGLE_TASK = "DELETE_SINGLE_TASK";
-//
+export const GET_TASKS = "GET_TASKS";
+export const CLEAR_TODOS_AFTER_LOGOUT = "CLEAR_TODOS_AFTER_LOGOUT";
+// Auth
 export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
 export const REGISTER_FAIL = "REGISTER_FAIL";
 export const USER_LOADED = "USER_LOADED";
@@ -17,6 +19,3 @@ export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAIL = "LOGIN_FAIL";
 export const LOGOUT = "LOGOUT";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
-//
-export const GET_TASKS = "GET_TASKS";
-export const CLEAR_TODOS_AFTER_LOGOUT = "CLEAR_TODOS_AFTER_LOGOUT";

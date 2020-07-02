@@ -1,7 +1,7 @@
 // Dependencies
 import React from "react";
 import styled from "styled-components";
-
+// Styled-Components
 const Container = styled.div`
   margin-left: 30rem;
   width: 100%;
@@ -9,7 +9,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
 `;
-
+// React-Component
 const EditorContainer = (props) => {
   return <Container>{props.children}</Container>;
 };

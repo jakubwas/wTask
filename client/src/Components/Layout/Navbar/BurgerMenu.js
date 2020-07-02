@@ -5,7 +5,7 @@ import styled from "styled-components";
 import NavbarButton from "./NavbarButton";
 // Context API
 import DisplayContext from "../../../Context/display/displayContext";
-
+// Styled Components
 const Menu = styled.svg`
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@ const Menu = styled.svg`
   justify-content: center;
   fill: rgba(255, 255, 255, 0.9);
 `;
-
+// React Component
 const BurgerMenu = () => {
   const displayContext = useContext(DisplayContext);
 

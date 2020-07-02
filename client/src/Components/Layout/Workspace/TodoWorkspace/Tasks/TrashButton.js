@@ -2,7 +2,7 @@
 import React from "react";
 // React Components
 import TaskButtonContainer from "./TaskButtonContainer";
-
+// React Component
 const TrashButton = ({ opacity, _id }) => {
   return (
     <TaskButtonContainer

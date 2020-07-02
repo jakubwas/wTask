@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 // Context API
 import TodoContext from "../../../../../Context/todo/todoContext";
-
+// Styled-Components
 const Container = styled.button`
   width: 3rem;
   height: 3rem;
@@ -23,7 +23,7 @@ const Container = styled.button`
     background: rgba(0, 0, 0, 0.1);
   }
 `;
-
+// React Component
 const TaskButtonContainer = (props) => {
   const todoContext = useContext(TodoContext);
   const { deleteSingleTask } = todoContext;

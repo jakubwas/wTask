@@ -1,18 +1,18 @@
 // Dependencies
 import React from "react";
 import MenuButtonContainer from "./MenuButtonContainer";
-
+// React Component
 const TodoListButton = () => {
   return (
     <MenuButtonContainer
-      tranY={"1px"}
-      btop={"1px solid rgba(0, 0, 0, 0.2)"}
-      bbottom={"1px solid rgba(0, 0, 0, 0.2)"}
+      tranY={"0.1rem"}
+      btop={"0.1rem solid rgba(0, 0, 0, 0.2)"}
+      bbottom={"0.1rem solid rgba(0, 0, 0, 0.2)"}
     >
       <svg
         viewBox="0 0 470.767 470.767"
         style={{ width: "2rem", height: "2rem", marginRight: "1.5rem" }}
-        fill="#389168"
+        fill="rgba(56, 145, 104, 1)"
       >
         <path
           d="M362.965,21.384H289.62L286.638,7.99C285.614,3.323,281.467,0,276.685,0h-82.618c-4.782,0-8.913,3.323-9.953,7.99

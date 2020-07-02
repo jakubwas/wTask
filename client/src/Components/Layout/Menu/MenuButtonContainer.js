@@ -1,7 +1,7 @@
 // Dependencies
 import React from "react";
 import styled from "styled-components";
-
+// Styled-Components
 const ButtonContainer = styled.li`
   width: 100%;
   display: flex;
@@ -10,23 +10,20 @@ const ButtonContainer = styled.li`
   padding: 1.3rem;
   margin-left: 0.5rem;
   font-size: 1.3rem;
-  font-family: "Montserrat", sans-serif;
-  cursor: pointer;
-  color: white;
   font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 1);
   border-top: ${(props) => props.btop};
   border-bottom: ${(props) => props.bbottom};
   transform: translateY(${(props) => props.tranY});
+  cursor: pointer;
 
   &:hover {
-    /* border-top: 1px solid #083358;
-    border-bottom: 1px solid #083358; */
     background: rgba(26, 38, 57, 0.8);
     position: relative;
-    z-index: 11;
   }
 `;
-
+// React Component
 const MenuButtonContainer = (props) => {
   return (
     <ButtonContainer

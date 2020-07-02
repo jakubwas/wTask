@@ -1,7 +1,9 @@
+// Dependencies
 import React, { Fragment, useState, useContext, useEffect } from "react";
 import styled from "styled-components";
+// Context API
 import TodoContext from "../../../../../Context/todo/todoContext";
-
+// Styled-Components
 const Container = styled.button`
   width: 2rem;
   height: 2rem;
@@ -19,12 +21,11 @@ const Container = styled.button`
     background: ${(props) => props.bgHover};
   }
 `;
-
 const Svg = styled.svg`
   width: 0.9rem;
   height: 0.9rem;
 `;
-
+// React Component
 const CheckBoxButton = ({ task, priority, status }) => {
   const todoContext = useContext(TodoContext);
   const { toggleStatus } = todoContext;

@@ -1,10 +1,12 @@
 // Dependencies
 import React, { useReducer } from "react";
 import axios from "axios";
-
+// React Components
+import setAuthToken from "../../utils/setAuthToken";
+// Context API
 import AuthReducer from "./authReducer";
 import AuthContext from "./authContext";
-import setAuthToken from "../../utils/setAuthToken";
+// Types
 import {
   REGISTER_SUCCESS,
   REGISTER_FAIL,
@@ -13,9 +15,8 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOGOUT,
-  CLEAR_ERRORS,
 } from "../types";
-
+// React Component
 const AuthState = (props) => {
   const initialState = {
     token: localStorage.getItem("token"),
@@ -97,8 +98,6 @@ const AuthState = (props) => {
       type: LOGOUT,
     });
   };
-  // Clear Erros
-
   return (
     <AuthContext.Provider
       value={{

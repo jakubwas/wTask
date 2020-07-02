@@ -27,9 +27,9 @@ const GroupContainer = styled.div`
 const Input = styled.input`
   width: 100%;
   font-size: 2rem;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   background: rgba(255, 255, 255, 0.5);
-  border: 3px solid rgba(0, 0, 0, 0.2);
+  border: 0.3rem solid rgba(0, 0, 0, 0.2);
   outline: none;
   padding: 0.5rem;
   margin-top: 0.3rem;
@@ -42,9 +42,9 @@ const Label = styled.label`
 const RegisterButton = styled.button`
   width: 70%;
   font-size: 2rem;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   padding: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
   color: rgba(0, 0, 0, 0.9);
   font-weight: 600;
   background: rgba(26, 38, 57, 1);
@@ -62,7 +62,7 @@ const LoginButton = styled.button`
   width: 50%;
   font-size: 2rem;
   font-weight: 600;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 0.1rem solid rgba(0, 0, 0, 0.5);
   background: rgba(0, 0, 0, 0.5);
   color: rgba(255, 255, 255, 1);
   padding: 0.3rem;

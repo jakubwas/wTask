@@ -1,3 +1,4 @@
+// Types
 import {
   SET_PRIORITY,
   GET_CURRENT_INPUT_VALUE,
@@ -8,7 +9,7 @@ import {
   GET_TASKS,
   CLEAR_TODOS_AFTER_LOGOUT,
 } from "../types";
-
+// React Reducer
 export default (state, action) => {
   switch (action.type) {
     case GET_TASKS:

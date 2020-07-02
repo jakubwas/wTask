@@ -1,7 +1,7 @@
 // Dependencies
 import React from "react";
 import styled from "styled-components";
-
+// Styled-Components
 const Container = styled.div`
   width: 100%;
   height: 3rem;
@@ -11,11 +11,11 @@ const Container = styled.div`
   cursor: pointer;
 
   &:hover {
-    background: #316fea;
-    color: white;
+    background: rgba(49, 111, 234, 1);
+    color: rgba(255, 255, 255, 1);
   }
 `;
-
+// React Component
 const SettingsButtonContainer = (props) => {
   return (
     <Container

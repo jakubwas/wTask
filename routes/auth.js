@@ -20,7 +20,6 @@ router.get("/", auth, async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
-
 // @route   POST api/auth
 // @desc    Auth user and get token
 // @acces   Public

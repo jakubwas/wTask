@@ -1,6 +1,8 @@
+// Dependencies
 import React from "react";
+// React Components
 import SettingsButtonContainer from "./SettingsButtonContainer";
-
+// React Component
 const SettingsButton = () => {
   return (
     <SettingsButtonContainer>

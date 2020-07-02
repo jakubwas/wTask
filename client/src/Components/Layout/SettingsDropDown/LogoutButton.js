@@ -1,4 +1,6 @@
+// Dependencies
 import React, { useContext } from "react";
+// React Components
 import SettingsButtonContainer from "./SettingsButtonContainer";
 // Context API
 import AuthContext from "../../../Context/auth/authContext";
@@ -7,18 +9,19 @@ import DisplayContext from "../../../Context/display/displayContext";
 
 const LogoutButton = () => {
   const authContext = useContext(AuthContext);
+  const { logout } = authContext;
+
   const todoContext = useContext(TodoContext);
+  const { clearTodos } = todoContext;
+
   const displayContext = useContext(DisplayContext);
+  const { toggleSettingsVisibility } = displayContext;
 
   const onClickHandlerFunctions = () => {
     logout();
     clearTodos();
     toggleSettingsVisibility();
   };
-
-  const { logout } = authContext;
-  const { clearTodos } = todoContext;
-  const { toggleSettingsVisibility } = displayContext;
 
   return (
     <SettingsButtonContainer onClickHandler={onClickHandlerFunctions}>

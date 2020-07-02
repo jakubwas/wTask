@@ -1,7 +1,7 @@
 // Dependencies
 import React from "react";
 import styled from "styled-components";
-
+// Styled-Components
 const TitlesContainer = styled.div`
   flex-basis: 64rem;
   @media screen and (max-width: 1200px) {
@@ -28,6 +28,7 @@ const HomePageSubtitle = styled.h2`
     font-size: 1.4rem;
   }
 `;
+// React-Component
 const HomePageTitles = () => {
   return (
     <TitlesContainer>

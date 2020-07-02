@@ -1,9 +1,8 @@
 // Dependencies
 import React from "react";
-import styled from "styled-components";
 // React Components
 import TaskButtonContainer from "./TaskButtonContainer";
-
+// React Component
 const EditButton = ({ opacity, _id }) => {
   return (
     <TaskButtonContainer

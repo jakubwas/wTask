@@ -18,7 +18,6 @@ router.get("/", auth, async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
-
 // @route   POST api/task-list
 // @desc    Add new task
 // @acces   Private
@@ -41,7 +40,6 @@ router.post("/", [auth], async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
-
 // @route   PUT api/task-list/:id
 // @desc    Update task
 // @acces   Private
@@ -78,7 +76,6 @@ router.put("/:id", auth, async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
-
 // @route   DELETE api/task-list/:id
 // @desc    Delete task
 // @acces   Private

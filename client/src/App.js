@@ -2,7 +2,6 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // React Components
-import Navbar from "./Components/Layout/_MainComponents/Navbar";
 import TodoEditor from "./Components/Layout/_MainComponents/TodoEditor";
 import RegisterPage from "./Components/auth/RegisterPage";
 import LoginPage from "./Components/auth/LoginPage";

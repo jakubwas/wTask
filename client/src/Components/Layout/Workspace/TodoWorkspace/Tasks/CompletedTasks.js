@@ -7,11 +7,11 @@ import Task from "./Task";
 import EmptyTaskListInfo from "./EmptyTaskListInfo";
 // Context API
 import TodoContext from "../../../../../Context/todo/todoContext";
-
+// Styled-Components
 const Container = styled.div`
   width: 100%;
 `;
-
+// React Component
 const UncompletedTasks = () => {
   const todoContext = useContext(TodoContext);
   const { tasks } = todoContext;

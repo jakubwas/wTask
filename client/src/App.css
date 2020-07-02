@@ -7,12 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +24,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 ::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.45);

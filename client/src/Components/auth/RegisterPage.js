@@ -1,12 +1,12 @@
 // Dependencies
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 // React Components
 import Navbar from "./Register/Navbar";
 import bgImage from "./Register/bgImage.png";
 import HomePageTtiles from "./Register/HomePageTitles";
 import RegisterForm from "./Register/RegisterForm";
-
+// Styled-Components
 const LandingPageBgContainer = styled.div`
   background-image: url(${bgImage});
   width: 100vw;
@@ -25,7 +25,7 @@ const LandingPageContentContainer = styled.div`
     padding-bottom: 10rem;
   }
 `;
-
+// React Component
 const Register = (props) => {
   return (
     <Fragment>

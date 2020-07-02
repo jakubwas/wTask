@@ -5,7 +5,7 @@ import DisplayContext from "./displayContext";
 import DisplayReducer from "./displayReducer";
 // Types
 import { MENU_TOGGLE, SETTINGS_TOGGLE } from "../types";
-
+// React Component
 const DisplayState = (props) => {
   const initialState = {
     menuVisibility: true,

@@ -2,16 +2,11 @@
 import React from "react";
 // React Components
 import NavbarButton from "./NavbarButton";
-
+// React Component
 const InfoButton = () => {
   return (
     <NavbarButton>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 128 128"
-        width="21px"
-        height="21px"
-      >
+      <svg viewBox="0 0 128 128" width="21px" height="21px">
         <path
           fill="#fff"
           d="M64,14c27.6,0,50,22.4,50,50c0,27.6-22.4,50-50,50c-27.6,0-50-22.4-50-50C14,36.4,36.4,14,64,14"

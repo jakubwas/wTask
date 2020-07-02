@@ -1,6 +1,5 @@
 // Dependencies
-import React, { useState, useContext } from "react";
-import styled from "styled-components";
+import React, { useContext } from "react";
 import { CSSTransition } from "react-transition-group";
 import { Link } from "react-router-dom";
 // React Components
@@ -9,9 +8,10 @@ import TodoListButton from "../Menu/TodoListButton";
 import HabitsControlButton from "../Menu/HabitsControlButton";
 // Context API
 import DisplayContext from "../../../Context/display/displayContext";
-
+// React Component
 const Menu = () => {
   const displayContext = useContext(DisplayContext);
+
   const { menuVisibility } = displayContext;
 
   return (
