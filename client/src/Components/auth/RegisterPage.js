@@ -12,7 +12,6 @@ const LandingPageBgContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
   background-size: cover;
-  margin-bottom: 100vh;
 `;
 const LandingPageContentContainer = styled.div`
   width: 93%;
@@ -22,6 +21,9 @@ const LandingPageContentContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 1113px) {
+    padding-bottom: 10rem;
+  }
 `;
 
 const Register = (props) => {

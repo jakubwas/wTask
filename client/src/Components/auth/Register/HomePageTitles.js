@@ -22,6 +22,7 @@ const HomePageSubtitle = styled.h2`
   color: white;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  font-style: italic;
   font-size: 2.5rem;
   @media screen and (max-width: 1200px) {
     font-size: 1.4rem;

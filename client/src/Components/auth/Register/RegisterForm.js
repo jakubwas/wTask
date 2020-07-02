@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 // Context API
 import AuthContext from "../../../Context/auth/authContext";
-
+// Styled-Components
 const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,51 +14,49 @@ const FormContainer = styled.div`
 `;
 const RegisterTitle = styled.h1`
   font-size: 3rem;
-  color: white;
+  color: rgba(255, 255, 255, 1);
   @media screen and (max-width: 520px) {
     font-size: 2.5rem;
     font-weight: 500;
   }
 `;
+const Form = styled.form``;
 const GroupContainer = styled.div`
-  margin: 1.2rem 0;
+  margin: 1.4rem 0;
 `;
-
 const Input = styled.input`
   width: 100%;
   font-size: 2rem;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  border: 3px solid rgba(0, 0, 0, 0.2);
   outline: none;
   padding: 0.5rem;
+  margin-top: 0.3rem;
 `;
-const Form = styled.form``;
 const Label = styled.label`
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   font-size: 1.4rem;
   font-weight: 500;
 `;
-const SubmitButton = styled.button`
+const RegisterButton = styled.button`
   width: 70%;
   font-size: 2rem;
   border-radius: 5px;
   padding: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  color: black;
+  color: rgba(0, 0, 0, 0.9);
   font-weight: 600;
   background: rgba(26, 38, 57, 1);
   outline: none;
   cursor: pointer;
 `;
-
 const LoginContainer = styled.div`
-  color: white;
+  color: rgba(255, 255, 255, 1);
   font-weight: 500;
   font-size: 1.3rem;
   margin-top: 2rem;
 `;
-
 const LoginButton = styled.button`
   margin-top: 0.5rem;
   width: 50%;
@@ -66,21 +64,22 @@ const LoginButton = styled.button`
   font-weight: 600;
   border: 1px solid rgba(0, 0, 0, 0.5);
   background: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: rgba(255, 255, 255, 1);
   padding: 0.3rem;
   cursor: pointer;
   outline: none;
 `;
-
+// React Component
 const RegisterForm = (props) => {
   const authContext = useContext(AuthContext);
-
   const { register, isAuthenticated } = authContext;
+
   useEffect(() => {
     if (isAuthenticated) {
       props.history.push("/");
     }
   }, [isAuthenticated]);
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -89,7 +88,9 @@ const RegisterForm = (props) => {
   });
 
   const { name, email, password, password2 } = user;
+
   const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
+
   const onSubmit = (e) => {
     e.preventDefault();
     register({
@@ -98,9 +99,10 @@ const RegisterForm = (props) => {
       password,
     });
   };
+
   return (
     <FormContainer>
-      <RegisterTitle>Register</RegisterTitle>
+      <RegisterTitle>Create account</RegisterTitle>
       <Form onSubmit={onSubmit}>
         <GroupContainer>
           <Label htmlFor="email">Name</Label>
@@ -148,10 +150,12 @@ const RegisterForm = (props) => {
             minLength="6"
           />
         </GroupContainer>
-        <SubmitButton>Sign up</SubmitButton>
+        <RegisterButton>Sign up</RegisterButton>
       </Form>
       <LoginContainer>
-        <span>Do you have account ? Please sign in here</span>
+        <span>
+          Do you already have an account ?<br />
+        </span>
         <Link to="/login">
           <LoginButton>Sign in</LoginButton>
         </Link>
