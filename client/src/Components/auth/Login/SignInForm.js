@@ -6,22 +6,20 @@ import styled from "styled-components";
 import AuthContext from "../../../Context/auth/authContext";
 // Styled-Components
 const FormContainer = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
   min-width: 40rem;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   padding: 8rem 2.5rem 12rem 2.5rem;
-  border: 1px solid black;
+  margin: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  background: rgba(255, 255, 255, 1);
 `;
 const SignInTitle = styled.h1`
-  font-size: 2.5rem;
-  color: rgba(0, 0, 0, 0.9);
   margin-bottom: 5rem;
+  font-size: 2.5rem;
   font-family: "Poppins", sans-serif;
+  color: rgba(0, 0, 0, 0.9);
 `;
 const GroupContainer = styled.div`
   margin: 1.4rem 0;
@@ -30,11 +28,11 @@ const Input = styled.input`
   width: 100%;
   font-size: 2rem;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0);
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   outline: none;
   padding: 0.5rem;
   margin-top: 0.3rem;
+  background: rgba(255, 255, 255, 0);
 `;
 const Form = styled.form``;
 const Label = styled.label`
@@ -46,13 +44,13 @@ const LogInButton = styled.button`
   width: 70%;
   font-size: 2rem;
   border-radius: 5px;
-  padding: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
   color: rgba(255, 255, 255, 0.92);
   font-weight: 600;
   background: rgba(26, 38, 57, 1);
   outline: none;
   cursor: pointer;
+  padding: 0.5rem;
   margin: 1rem 0 3rem 0;
 `;
 const SignUp = styled.p`
@@ -102,7 +100,6 @@ const SignInForm = (props) => {
           fill="#151a6a"
         />
       </svg>
-
       <SignInTitle>Log-in to your account</SignInTitle>
       <Form onSubmit={onSubmit}>
         <GroupContainer>
