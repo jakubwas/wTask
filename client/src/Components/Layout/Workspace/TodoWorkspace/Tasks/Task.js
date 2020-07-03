@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 // React Components
 import CheckBoxButton from "./CheckBoxButton";
-import EditButton from "./EditButton";
 import TrashButton from "./TrashButton";
 // Styled-Components
 const TaskContainer = styled.div`
@@ -41,11 +40,6 @@ const Task = ({ task }) => {
       ) : (
         <TextContainer>{task.name}</TextContainer>
       )}
-
-      {task.status === "uncompleted" && (
-        <EditButton opacity={taskBtnsOpacity} _id={task._id} />
-      )}
-
       <TrashButton opacity={taskBtnsOpacity} _id={task._id} />
     </TaskContainer>
   );

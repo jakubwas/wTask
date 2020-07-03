@@ -24,7 +24,6 @@ const Navbar = () => {
     <NavigationBar>
       <BurgerMenu />
       <RightSideNavIcon>
-        <InfoButton />
         <Settings />
       </RightSideNavIcon>
     </NavigationBar>
