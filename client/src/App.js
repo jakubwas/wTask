@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import TodoEditor from "./Components/Layout/_MainComponents/TodoEditor";
 import RegisterPage from "./Components/auth/RegisterPage";
 import LoginPage from "./Components/auth/LoginPage";
-import HabitsEditor from "./Components/Layout/_MainComponents/HabitsEditor";
 // Context API
 import DisplayState from "./Context/display/DisplayState";
 import TodoState from "./Context/todo/TodoState";
@@ -30,7 +29,6 @@ const App = () => {
                 <Route exact path="/register" component={RegisterPage} />
                 <Route exact path="/login" component={LoginPage} />
                 <PrivateRoute exact path="/" component={TodoEditor} />
-                <Route exact path="/habits-control" component={HabitsEditor} />
               </Switch>
             </DisplayState>
           </TodoState>

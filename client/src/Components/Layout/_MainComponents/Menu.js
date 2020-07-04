@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 // React Components
 import MenuContainer from "../../Containers/MenuContainer";
 import TodoListButton from "../Menu/TodoListButton";
-import HabitsControlButton from "../Menu/HabitsControlButton";
 import CurrentUserInfo from "../Menu/CurrentUserInfo";
 // Context API
 import DisplayContext from "../../../Context/display/displayContext";
@@ -27,9 +26,6 @@ const Menu = () => {
           <CurrentUserInfo />
           <Link to="/" className="link">
             <TodoListButton />
-          </Link>
-          <Link to="/habits-control" className="link">
-            <HabitsControlButton />
           </Link>
         </MenuContainer>
       </CSSTransition>

@@ -28,6 +28,13 @@ const DisplayState = (props) => {
     });
   };
 
+  const resetMenuVisibility = () => {
+    dispatch({
+      type: MENU_TOGGLE,
+      payload: false,
+    });
+  };
+
   return (
     <DisplayContext.Provider
       value={{
@@ -35,6 +42,7 @@ const DisplayState = (props) => {
         settingsVisibility: state.settingsVisibility,
         toggleMenuVisibility,
         toggleSettingsVisibility,
+        resetMenuVisibility,
       }}
     >
       {props.children}

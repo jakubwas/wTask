@@ -93,11 +93,15 @@ const RegisterForm = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    register({
-      name,
-      email,
-      password,
-    });
+    if (password !== password2) {
+      console.log("Wrong Password");
+    } else {
+      register({
+        name,
+        email,
+        password,
+      });
+    }
   };
 
   return (
@@ -116,7 +120,7 @@ const RegisterForm = (props) => {
           />
         </GroupContainer>
         <GroupContainer>
-          <Label htmlFor="email">Email Adress</Label>
+          <Label htmlFor="email">Email Address</Label>
           <Input
             id="email"
             type="email"

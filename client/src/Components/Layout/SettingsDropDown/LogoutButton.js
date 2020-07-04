@@ -15,12 +15,13 @@ const LogoutButton = () => {
   const { clearTodos } = todoContext;
 
   const displayContext = useContext(DisplayContext);
-  const { toggleSettingsVisibility } = displayContext;
+  const { toggleSettingsVisibility, resetMenuVisibility } = displayContext;
 
   const onClickHandlerFunctions = () => {
     logout();
     clearTodos();
     toggleSettingsVisibility();
+    resetMenuVisibility();
   };
 
   return (
