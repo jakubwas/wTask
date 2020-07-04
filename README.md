@@ -22,3 +22,8 @@ WTask is
 ```
 
 ## Version history
+
+- Version 1.0
+  - Core components created: *Register Page*, *Login Page*, *Task-List Page*,
+  - Todo List created: Add/Remove Task, Mark task as Completed/Uncompleted, Prioritize tasks,
+  - Applied Styled-Components
