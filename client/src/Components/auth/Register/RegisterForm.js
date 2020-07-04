@@ -24,15 +24,20 @@ const Form = styled.form``;
 const GroupContainer = styled.div`
   margin: 1.4rem 0;
 `;
+// rgba(0, 0, 0, 0.2)
 const Input = styled.input`
   width: 100%;
   font-size: 2rem;
   border-radius: 0.5rem;
-  background: rgba(255, 255, 255, 0.5);
-  border: 0.3rem solid rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.7);
+  border: ${(props) => props.borderColor};
   outline: none;
   padding: 0.5rem;
   margin-top: 0.3rem;
+  ::placeholder {
+    color: red;
+    font-weight: 700;
+  }
 `;
 const Label = styled.label`
   color: rgba(255, 255, 255, 0.85);
@@ -91,10 +96,25 @@ const RegisterForm = (props) => {
 
   const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
 
+  // Password validation
+  const [passwordPlaceholderMessage, setPasswordPlaceholderMessage] = useState(
+    ""
+  );
+  const [passwordBorder, setPasswordBorder] = useState(
+    "0.3rem solid rgba(0, 0, 0, 0.2)"
+  );
+  // Email validation
+  const [emailPlaceholderMessage, setEmailPlaceholderMessage] = useState("");
+  const [emaildBorder, setEmailBorder] = useState(
+    "0.3rem solid rgba(0, 0, 0, 0.2)"
+  );
+
   const onSubmit = (e) => {
     e.preventDefault();
     if (password !== password2) {
-      console.log("Wrong Password");
+      setUser({ ...user, password: "", password2: "" });
+      setPasswordPlaceholderMessage("Passwords must match");
+      setPasswordBorder("0.1rem solid rgba(255, 0, 0, 1)");
     } else {
       register({
         name,
@@ -109,7 +129,7 @@ const RegisterForm = (props) => {
       <RegisterTitle>Create account</RegisterTitle>
       <Form onSubmit={onSubmit}>
         <GroupContainer>
-          <Label htmlFor="email">Name</Label>
+          <Label htmlFor="name">Name</Label>
           <Input
             id="name"
             type="text"
@@ -117,6 +137,7 @@ const RegisterForm = (props) => {
             value={name}
             onChange={onChange}
             required
+            borderColor={"0.3rem solid rgba(0, 0, 0, 0.2)"}
           />
         </GroupContainer>
         <GroupContainer>
@@ -128,6 +149,12 @@ const RegisterForm = (props) => {
             value={email}
             onChange={onChange}
             required
+            placeholder={emailPlaceholderMessage}
+            borderColor={emaildBorder}
+            onFocus={() => {
+              setEmailPlaceholderMessage("");
+              setEmailBorder("0.3rem solid rgba(0, 0, 0, 0.2)");
+            }}
           />
         </GroupContainer>
         <GroupContainer>
@@ -140,6 +167,12 @@ const RegisterForm = (props) => {
             onChange={onChange}
             required
             minLength="6"
+            placeholder={passwordPlaceholderMessage}
+            borderColor={passwordBorder}
+            onFocus={() => {
+              setPasswordPlaceholderMessage("");
+              setPasswordBorder("0.3rem solid rgba(0, 0, 0, 0.2)");
+            }}
           />
         </GroupContainer>
         <GroupContainer>
@@ -152,9 +185,15 @@ const RegisterForm = (props) => {
             onChange={onChange}
             required
             minLength="6"
+            placeholder={passwordPlaceholderMessage}
+            borderColor={passwordBorder}
+            onFocus={() => {
+              setPasswordPlaceholderMessage("");
+              setPasswordBorder("0.3rem solid rgba(0, 0, 0, 0.2)");
+            }}
           />
         </GroupContainer>
-        <RegisterButton>Sign up</RegisterButton>
+        <RegisterButton type="submit">Sign up</RegisterButton>
       </Form>
       <LoginContainer>
         <span>
