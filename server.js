@@ -11,10 +11,6 @@ connectDB();
 // Init Middleware (old name -> express body-parser)
 app.use(express.json({ extended: false }));
 
-app.get("/", (req, res) => {
-  res.json({ msg: "Welcome " });
-});
-
 // Register user route
 app.use("/api/users", require("./routes/users"));
 // Log in user
