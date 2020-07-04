@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 import MenuContainer from "../../Containers/MenuContainer";
 import TodoListButton from "../Menu/TodoListButton";
 import HabitsControlButton from "../Menu/HabitsControlButton";
+import CurrentUserInfo from "../Menu/CurrentUserInfo";
 // Context API
 import DisplayContext from "../../../Context/display/displayContext";
 // React Component
 const Menu = () => {
   const displayContext = useContext(DisplayContext);
-
   const { menuVisibility } = displayContext;
 
   return (
@@ -24,6 +24,7 @@ const Menu = () => {
         classNames="menu"
       >
         <MenuContainer>
+          <CurrentUserInfo />
           <Link to="/" className="link">
             <TodoListButton />
           </Link>

@@ -8,7 +8,6 @@ const ButtonContainer = styled.li`
   align-items: center;
   text-align: center;
   padding: 1.3rem;
-  margin-left: 0.5rem;
   font-size: 1.3rem;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;

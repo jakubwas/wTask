@@ -10,7 +10,7 @@ const SettingsButton = () => {
   const { toggleSettingsVisibility } = displayContext;
 
   return (
-    <div>
+    <div style={{ marginRight: "1rem" }}>
       <NavbarButton onClickHandler={toggleSettingsVisibility}>
         <svg viewBox="0 0 128 128" width="21px" height="21px">
           <path
