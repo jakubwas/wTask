@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 // Styled-Components
 const Container = styled.div`
-  margin-left: 0rem;
+  margin-left: 30rem;
   width: 100%;
   display: flex;
   align-items: center;

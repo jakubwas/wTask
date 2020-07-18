@@ -7,6 +7,7 @@ const Container = styled.ul`
   width: 30rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: rgba(222, 222, 222, 0.4);
   overflow: hidden;
   position: fixed;
