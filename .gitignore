@@ -1,4 +1,4 @@
-dist/server/node_modules
+/node_modules
 
-dist/client/build
-dist/client/node_modules
+client/build
+client/node_modules
