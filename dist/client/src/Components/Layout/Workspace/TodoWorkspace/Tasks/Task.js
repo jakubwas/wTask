@@ -8,11 +8,13 @@ import TrashButton from "./TrashButton";
 const TaskContainer = styled.div`
   width: 100%;
   border: none;
+  overflow-wrap: break-word;
+
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
   display: flex;
 `;
 const TextContainer = styled.div`
-  width: 100%;
+  width: 90%;
   font-size: 1.4rem;
   margin: 1.2rem 2.5rem 1.2rem 0;
   line-height: 2rem;

@@ -22,6 +22,16 @@ const Subtitle = styled.h3`
   text-align: center;
   font-family: "Poppins", sans-serif;
 `;
+const CopyrightAuth = styled.h3`
+  color: rgba(0, 0, 0, 0.57);
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  bottom: 1.3rem;
+`;
+const Copyright = styled.span`
+  color: rgba(0, 0, 0, 0.37);
+`;
 
 // React Component
 const Menu = () => {
@@ -49,7 +59,7 @@ const Menu = () => {
             id="b3347a10-18dd-4c71-91c3-38a98340ba03"
             data-name="Layer 1"
             width="250px"
-            height="500px"
+            height="400px"
             viewBox="0 0 963.50956 774.36439"
           >
             <title>project_completed</title>
@@ -199,6 +209,9 @@ const Menu = () => {
               fill="#6c63ff"
             />
           </svg>
+          <CopyrightAuth>
+            <Copyright>{"\u00A9"} 2020 </Copyright>Jakub Was
+          </CopyrightAuth>
         </MenuContainer>
       </CSSTransition>
     </div>

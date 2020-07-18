@@ -1,5 +1,5 @@
 // Dependencies
-import React, { useContext } from "react";
+import React, { useContext, Fragment } from "react";
 import styled from "styled-components";
 // React Components
 import PriorityButton from "./PriorityButton";
@@ -27,23 +27,33 @@ const FormPriority = () => {
   return (
     <PriorityContainer>
       <span style={{ marginRight: "1rem" }}>Priority</span>
-      {/* Priority : Low */}
-      {taskPriority > 0 ? (
-        <PriorityButton fill="blue" priorityValue={1} />
-      ) : (
-        <PriorityButton fill="rgba(0, 0, 0, 0.15)" priorityValue={1} />
+      {taskPriority == 0 && (
+        <Fragment>
+          <PriorityButton fill="rgba(0, 0, 0, 0.15)" priorityValue={1} />
+          <PriorityButton fill="rgba(0, 0, 0, 0.15)" priorityValue={2} />
+          <PriorityButton fill="rgba(0, 0, 0, 0.15)" priorityValue={3} />
+        </Fragment>
       )}
-      {/* Priority : Medium */}
-      {taskPriority > 1 ? (
-        <PriorityButton fill="blue" priorityValue={2} />
-      ) : (
-        <PriorityButton fill="rgba(0, 0, 0, 0.15)" priorityValue={2} />
+      {taskPriority == 1 && (
+        <Fragment>
+          <PriorityButton fill="rgba(0, 0, 255, 0.8)" priorityValue={1} />
+          <PriorityButton fill="rgba(0, 0, 0, 0.15)" priorityValue={2} />
+          <PriorityButton fill="rgba(0, 0, 0, 0.15)" priorityValue={3} />
+        </Fragment>
       )}
-      {/* Priority : High */}
-      {taskPriority > 2 ? (
-        <PriorityButton fill="blue" priorityValue={3} />
-      ) : (
-        <PriorityButton fill="rgba(0, 0, 0, 0.15)" priorityValue={3} />
+      {taskPriority == 2 && (
+        <Fragment>
+          <PriorityButton fill="rgba(219, 147, 64, 0.8)" priorityValue={1} />
+          <PriorityButton fill="rgba(219, 147, 64, 0.8)" priorityValue={2} />
+          <PriorityButton fill="rgba(0, 0, 0, 0.15)" priorityValue={3} />
+        </Fragment>
+      )}
+      {taskPriority == 3 && (
+        <Fragment>
+          <PriorityButton fill="rgba(255, 0, 0, 0.8)" priorityValue={1} />
+          <PriorityButton fill="rgba(255, 0, 0, 0.8)" priorityValue={2} />
+          <PriorityButton fill="rgba(255, 0, 0, 0.8)" priorityValue={3} />
+        </Fragment>
       )}
     </PriorityContainer>
   );
