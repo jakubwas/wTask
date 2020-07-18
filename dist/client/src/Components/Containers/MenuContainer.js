@@ -7,12 +7,12 @@ const Container = styled.ul`
   width: 30rem;
   display: flex;
   flex-direction: column;
-  background: rgba(54, 71, 79, 1);
+  background: rgba(222, 222, 222, 0.4);
   overflow: hidden;
   position: fixed;
   top: 4.3rem;
   left: 0;
-  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.9);
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(200, 200, 200, 0.8);
 `;
 // React-Component
 const MenuContainer = (props) => {
