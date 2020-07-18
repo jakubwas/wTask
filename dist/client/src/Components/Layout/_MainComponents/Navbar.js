@@ -22,6 +22,8 @@ const AppLogo = styled.h1`
   margin-left: 1rem;
   font-size: 2rem;
   color: rgba(255, 255, 255, 0.8);
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
 `;
 const RightIconsContainer = styled.div`
   display: flex;

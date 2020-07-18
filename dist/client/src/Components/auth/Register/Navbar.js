@@ -22,6 +22,7 @@ const AppTitle = styled.div`
   font-size: 2.5rem;
   color: rgba(255, 255, 255, 1);
   padding-top: 1.5rem;
+  font-family: "Pacifico", cursive;
 `;
 // React Component
 const Navbar = () => {

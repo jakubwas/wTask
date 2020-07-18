@@ -59,6 +59,10 @@ const LogInButton = styled.button`
   cursor: pointer;
   padding: 0.5rem;
   margin: 1rem 0 3rem 0;
+  transition: background 0.3s;
+  &:hover {
+    background: rgba(26, 17, 184, 1);
+  }
 `;
 const SignUp = styled.p`
   font-size: 1.2rem;
