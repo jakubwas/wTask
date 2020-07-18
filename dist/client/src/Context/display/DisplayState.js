@@ -8,7 +8,7 @@ import { MENU_TOGGLE, SETTINGS_TOGGLE } from "../types";
 // React Component
 const DisplayState = (props) => {
   const initialState = {
-    menuVisibility: true,
+    menuVisibility: false,
     settingsVisibility: false,
   };
 
@@ -31,7 +31,7 @@ const DisplayState = (props) => {
   const resetMenuVisibility = () => {
     dispatch({
       type: MENU_TOGGLE,
-      payload: false,
+      payload: true,
     });
   };
 

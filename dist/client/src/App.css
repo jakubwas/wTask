@@ -78,3 +78,6 @@ body {
 .content-exit-done {
   margin-left: 0rem !important;
 }
+.content-enter-done {
+  margin-left: 30em !important;
+}
